@@ -1,10 +1,8 @@
 import React from "react"
 import Layout from "../components/Layout"
-import "../styles/pages/about.module.scss"
-import aboutStyles from "../styles/pages/about.module.scss"
 
 const About = () => (
-  <Layout className={aboutStyles.about}>
+  <Layout className="about">
     <h1>Who's Nozomi Ishii??</h1>
     <a
       href="https://twitter.com/nozomiishii_jp"
