@@ -1,3 +1,5 @@
 import React from "react"
 
-export default () => <div>nozomi new page on 2020</div>
+const Index = () => <div>nozomi new page on 2020</div>
+
+export default Index
