@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
 
-const Blog = () => <Layout>blog page</Layout>
+const Codelab = () => <Layout>codelab</Layout>
 
-export default Blog
+export default Codelab
