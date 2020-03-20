@@ -1,9 +1,9 @@
 import React from "react"
-import "./footer.module.scss"
-import footerStyle from "./footer.module.scss"
+import "../styles/components/footer.module.scss"
+import footerStyles from "../styles/components/footer.module.scss"
 
 const Footer = () => (
-  <div className={footerStyle.footer}>
+  <div className={footerStyles.footer}>
     <p>© 2020 NOZOMI ISHII</p>
   </div>
 )

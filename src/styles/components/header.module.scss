@@ -1,21 +1,19 @@
 .header {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 3rem;
   padding: 1rem 0 3 rem;
-  a {
-    text-decoration: none;
-  }
   h1 {
     color: green;
-    text-decoration: none;
   }
   ul {
     display: flex;
+    align-items: center;
     list-style-type: none;
     margin: 0;
     a {
       color: #999;
       margin-right: 1.3rem;
-      text-decoration: none;
       &:hover {
         color: greenyellow;
       }
