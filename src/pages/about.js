@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import aboutStyles from "../styles/pages/about.module.scss"
 
-const About = () => (
+const AboutPage = () => (
   <Layout>
     <div className={aboutStyles.about}>
       <h1>Who's Nozomi Ishii??</h1>
@@ -24,4 +24,4 @@ const About = () => (
   </Layout>
 )
 
-export default About
+export default AboutPage
