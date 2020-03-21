@@ -1,9 +1,11 @@
 import React from "react"
 import Layout from "../components/Layout"
 import aboutStyles from "../styles/pages/about.module.scss"
+import Head from "../components/Head"
 
 const AboutPage = () => (
   <Layout>
+    <Head title="ABOUT" />
     <div className={aboutStyles.about}>
       <h1>Who's Nozomi Ishii??</h1>
       <a

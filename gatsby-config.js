@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "c2020",
-    auther: "nozomi ishii",
+    auther: "NOZOMI ISHII",
   },
   plugins: [
     {
