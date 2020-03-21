@@ -26,7 +26,7 @@ const BlogPage = () => {
             <li key={edge.id} className={blogStyles.post}>
               <Link to={`/blog/${edge.node.slug}`}>
                 <h3>{edge.node.title}</h3>
-                <p>edge.node.date</p>
+                <p>{edge.node.date}</p>
               </Link>
             </li>
           )

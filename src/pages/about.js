@@ -21,6 +21,8 @@ const AboutPage = () => (
         GITHUB
       </a>
     </div>
+    <div>privious webpage</div>
+    <div>works</div>
   </Layout>
 )
 
