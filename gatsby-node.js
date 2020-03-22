@@ -14,7 +14,6 @@ module.exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-  console.log(res)
   res.data.allContentfulBlogPost.edges.forEach(edge => {
     createPage({
       component: blogTemplate,
