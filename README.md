@@ -6,8 +6,8 @@ React, Gatsby, Contentful
 JavaScript
 Redux, GraphQL
 HTML, CSS, SCSS
-Bootstrap4, React BootStrap
-p5.js, ml5.js,
+Material-UI, Bootstrap4, React BootStrap
+p5.js, ml5.js
 npm, yarn
 Node.js
 webpack4, Babel
