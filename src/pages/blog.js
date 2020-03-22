@@ -7,17 +7,18 @@ import Head from "../components/Head"
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulBlogPost(sort: { fields: date, order: DESC }) {
+      allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
         edges {
           node {
             title
             slug
-            date(formatString: "MMMM Do, YYYY")
+            publishedDate(formatString: "MMMM Do, YYYY")
           }
         }
       }
     }
   `)
+
   return (
     <Layout>
       <Head title="BLOG" />
