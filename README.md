@@ -2,12 +2,12 @@ nozomi ishii
 
 ↓ 　 what I can do is down below 　 ↓
 
-React, Gatsby, Contentful
-JavaScript
-Redux, GraphQL
-HTML, CSS, SCSS
-Material-UI, Bootstrap4, React BootStrap
+React, Material-UI
 p5.js, ml5.js
+Gatsby, Contentful
+JavaScript
+GraphQL
+HTML, CSS, SCSS
 npm, yarn
 Node.js
 webpack4, Babel
