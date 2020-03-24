@@ -11,7 +11,7 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
-    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-react-helmet-async",
     "gatsby-plugin-sass",
     {
       resolve: "gatsby-source-filesystem",
