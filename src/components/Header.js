@@ -1,9 +1,9 @@
-import React from "react"
-import { Link } from "gatsby"
-import headerStyles from "../styles/components/header.module.scss"
-
+import React from "react";
+import { Link } from "gatsby";
+import headerStyles from "../styles/components/header.module.scss";
+import Container from "react-bootstrap/Container";
 const Header = () => (
-  <div className={headerStyles.header}>
+  <Container className={headerStyles.header}>
     <Link to="/">
       <h1>NOZOMI ISHII</h1>
     </Link>
@@ -21,7 +21,7 @@ const Header = () => (
         CONTACT
       </Link>
     </ul>
-  </div>
-)
+  </Container>
+);
 
-export default Header
+export default Header;
