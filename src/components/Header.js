@@ -12,7 +12,7 @@ const Header = () => (
         ABOUT
       </Link>
       <Link to="/blog" activeClassName={headerStyles.activeNavItem}>
-        BLOG
+        INFO
       </Link>
       <Link to="/codelab" activeClassName={headerStyles.activeNavItem}>
         CODE LAB

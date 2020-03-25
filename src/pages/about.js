@@ -7,6 +7,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 const AboutPage = () => {
   const data = useStaticQuery(graphql`
@@ -60,18 +61,30 @@ const AboutPage = () => {
           <div>
             <h4>Privious webpage</h4>
             <Row>
-              <Col xs={4}>
-                <a href="http://www.nozomiishii.jp/" target="_blank">
+              <Col xs={6}>
+                <a
+                  href="http://www.nozomiishii.jp/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Img fluid={c2019.childImageSharp.fluid} />
                 </a>
+                <h5>2020</h5>
+                <p>First time for creating my page using Ruby on Rails.</p>
               </Col>
             </Row>
           </div>
-          <div>
+          {/* <div>
             <h4>Works</h4>
-          </div>
+          </div> */}
         </Col>
-        <Col md={5}>twitter</Col>
+        <Col md={5}>
+          <TwitterTimelineEmbed
+            sourceType="profile"
+            screenName="nozomiishii_jp"
+            options={{ height: "80vh" }}
+          />
+        </Col>
       </Row>
     </Layout>
   );
