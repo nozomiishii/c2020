@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, graphql, useStaticQuery } from "gatsby";
 import Layout from "../components/Layout";
-import blogStyles from "../styles/pages/blog.module.scss";
+import classes from "../styles/pages/blog.module.scss";
 import Head from "../components/Head";
 
 const BlogPage = () => {
@@ -24,18 +24,25 @@ const BlogPage = () => {
       }
     }
   `);
-  // console.log(data.allContentfulBlogPost.edges.node.media.src);
+  console.log(data.allContentfulBlogPost.edges[0].node.media.fluid.src);
   return (
     <Layout>
       <Head title="INFO" />
       <h2>Information</h2>
-      <ol className={blogStyles.posts}>
+      <ol className={classes.posts}>
         {data.allContentfulBlogPost.edges.map((edge) => {
           return (
-            <li key={edge.node.id} className={blogStyles.post}>
+            <li key={edge.node.id} className={classes.post}>
               <Link to={`/blog/${edge.node.slug}`}>
-                <h3>{edge.node.title}</h3>
-                <p>{edge.node.date}</p>
+                <img
+                  src={edge.node.media.fluid.src}
+                  alt={edge.node.title}
+                  className="pr-3"
+                />
+                <div className={classes.content}>
+                  <h3>{edge.node.title}</h3>
+                  <p>{edge.node.publishedDate}</p>
+                </div>
               </Link>
             </li>
           );
