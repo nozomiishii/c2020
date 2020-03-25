@@ -1,4 +1,5 @@
 import React from "react";
+import classes from "../styles/components/linkToSNS.module.scss";
 
 const LinkToSNS = () => {
   const sns = [
@@ -7,13 +8,13 @@ const LinkToSNS = () => {
   ];
 
   return (
-    <React.Fragment>
+    <div className={classes.links}>
       {sns.map(({ name, href }) => (
         <a href={href} target="_blank" rel="noopener noreferrer" key={name}>
           {name.toUpperCase()}
         </a>
       ))}
-    </React.Fragment>
+    </div>
   );
 };
 

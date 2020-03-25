@@ -5,6 +5,8 @@ import Head from "../components/Head";
 import LinkToSNS from "../components/LinkToSNS";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 const AboutPage = () => {
   const data = useStaticQuery(graphql`
@@ -22,18 +24,55 @@ const AboutPage = () => {
       }
     }
   `);
-  console.log(data);
-  console.log(data.images.nodes);
+
+  // console.log(data);
+  // console.log(data.images.nodes.find(({ name }) => name === "c2019"));
+  const images = data.images.nodes;
+  const c2019 = images.find(({ name }) => name === "c2019");
+  const profile = images.find(({ name }) => name === "profile");
+
   return (
     <Layout>
-      <Head title="ABOUT" />
-      <div className={aboutStyles.about}>
-        <h2>Who's Nozomi Ishii?</h2>
-        {/* <Img /> */}
-        <LinkToSNS />
-      </div>
-      <div>privious webpage</div>
-      <div>works</div>
+      <h2>Nozomi Ishii who?</h2>
+      <Row>
+        <Col md={7}>
+          <Head title="ABOUT" />
+          <div className={aboutStyles.about}>
+            <Row>
+              <Col xs={5}>
+                <Img fluid={profile.childImageSharp.fluid} />
+                <LinkToSNS />
+              </Col>
+              <Col xs={7}>
+                <h4>Nozomi Ishii</h4>
+                <h4>いしいのぞみ</h4>
+                <h6>Front-End web developer</h6>
+                <h5 className="mt-5">Skill-set</h5>
+                <p>
+                  React, GraphQL, Gatsby.js, Contentful, JavaScript, HTML, CSS,
+                  SCSS, Bootstrap4, p5.js, ml5.js, npm, yarn, Node.js, webpack4,
+                  Babel, Express, MangoDB, Firebase Jest, Enzyme, ESLint, Visual
+                  Studio Code, iTerm2, Homebrew, GitHub, Heroku
+                </p>
+              </Col>
+            </Row>
+          </div>
+          <div>
+            <h4>Privious webpage</h4>
+            <Row>
+              <Col xs={4}>
+                <a href="http://www.nozomiishii.jp/" target="_blank">
+                  <Img fluid={c2019.childImageSharp.fluid} />
+                </a>
+              </Col>
+            </Row>
+          </div>
+          <div>
+            <h4>Works</h4>
+          </div>
+        </Col>
+        <Col md={5}>twitter</Col>
+      </Row>
     </Layout>
   );
 };
