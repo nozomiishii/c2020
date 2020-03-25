@@ -5,6 +5,7 @@ import Img from "gatsby-image";
 import { useStaticQuery, graphql } from "gatsby";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
 import classes from "../styles/pages/codelab.module.scss";
 
 const CodelabPage = () => {
@@ -56,10 +57,11 @@ const CodelabPage = () => {
 
   return (
     <Layout>
-      <Head title="CODE LAB" />
-      <h2>Codelab</h2>
-
-      <Row>{displayImages()}</Row>
+      <Container>
+        <Head title="CODE LAB" />
+        <h2>Codelab</h2>
+        <Row>{displayImages()}</Row>
+      </Container>
     </Layout>
   );
 };

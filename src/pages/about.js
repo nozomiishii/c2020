@@ -9,7 +9,7 @@ const AboutPage = () => {
     <Layout>
       <Head title="ABOUT" />
       <div className={aboutStyles.about}>
-        <h2>Who's Nozomi Ishii??</h2>
+        <h2>Who's Nozomi Ishii?</h2>
         <LinkToSNS />
       </div>
       <div>privious webpage</div>
