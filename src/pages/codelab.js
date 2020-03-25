@@ -25,20 +25,18 @@ const CodelabPage = () => {
       }
     }
   `);
-  console.log(data.images.nodes.map((node) => node.name).sort());
+  // console.log(data.images.nodes.map((node) => node.name).sort());
 
   const displayImages = () => {
     const source = data.images.nodes;
     const sortedSource = source.sort((a, b) => {
-      console.log("a.name", a.name);
-      console.log("b.name", b.name);
-      // a.name - b.name;
       if (a.name < b.name) {
         return 1;
       }
       if (a.name > b.name) {
         return -1;
       }
+      return 0;
     });
     console.log(sortedSource);
     return sortedSource.map((image) => {

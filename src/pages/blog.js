@@ -14,12 +14,17 @@ const BlogPage = () => {
             slug
             publishedDate(formatString: "MMMM Do, YYYY")
             id
+            media {
+              fluid {
+                src
+              }
+            }
           }
         }
       }
     }
   `);
-
+  // console.log(data.allContentfulBlogPost.edges.node.media.src);
   return (
     <Layout>
       <Head title="INFO" />
