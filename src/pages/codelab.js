@@ -7,6 +7,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import classes from "../styles/pages/codelab.module.scss";
+import { codeLabData } from "../data/codelab";
 
 const CodelabPage = () => {
   const data = useStaticQuery(graphql`
@@ -27,7 +28,8 @@ const CodelabPage = () => {
     }
   `);
   // console.log(data.images.nodes.map((node) => node.name).sort());
-
+  // console.log(codeLabData.reverse());
+  const codeLabTitle = codeLabData.reverse();
   const displayImages = () => {
     const source = data.images.nodes;
     const sortedSource = source.sort((a, b) => {
@@ -39,8 +41,8 @@ const CodelabPage = () => {
       }
       return 0;
     });
-    console.log(sortedSource);
-    return sortedSource.map((image) => {
+    // console.log(sortedSource);
+    return sortedSource.map((image, index) => {
       return (
         <Col xs={6} lg={3} key={image.id} className="my-4">
           <a
@@ -49,7 +51,10 @@ const CodelabPage = () => {
           >
             <Img fluid={image.childImageSharp.fluid} />
           </a>
-          <p>{image.name.toUpperCase()}</p>
+          <p>
+            {image.name.toUpperCase()} / {codeLabTitle[index][1]}
+          </p>
+          <p>- {codeLabTitle[index][2]} -</p>
         </Col>
       );
     });
