@@ -1,0 +1,8 @@
+.card {
+  width: 100%;
+  display: inline-block;
+  transition-duration: 1s;
+  &:hover {
+    transform: translateY(-20px);
+  }
+}

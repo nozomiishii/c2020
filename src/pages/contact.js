@@ -1,12 +1,12 @@
-import React from "react"
-import Layout from "../components/Layout"
-import Head from "../components/Head"
+import React from "react";
+import Layout from "../components/Layout";
+import Head from "../components/Head";
 
 const ContactPage = () => (
   <Layout>
     <Head title="CONTACT" />
-    contact page
+    <h2>Contact</h2>
   </Layout>
-)
+);
 
-export default ContactPage
+export default ContactPage;
