@@ -5,7 +5,7 @@ import Img from "gatsby-image";
 import { useStaticQuery, graphql } from "gatsby";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import classes from "../styles/components/codelab.module.scss";
+import classes from "../styles/pages/codelab.module.scss";
 
 const CodelabPage = () => {
   const data = useStaticQuery(graphql`
