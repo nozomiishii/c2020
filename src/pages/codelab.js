@@ -49,7 +49,7 @@ const CodelabPage = () => {
             href={`https://nozomiishii.github.io/codeLab/${image.name}`}
             className={classes.card}
           >
-            <Img fluid={image.childImageSharp.fluid} />
+            <Img fluid={image.childImageSharp.fluid} loading="lazy" />
           </a>
           <p>
             {image.name.toUpperCase()} / {codeLabTitle[index][1]}

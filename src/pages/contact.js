@@ -10,7 +10,7 @@ const ContactPage = () => (
   <Layout>
     <Head title="CONTACT" />
     <Container>
-      <Form className={classes.form}>
+      <Form action="/contactSubmitted" className={classes.form}>
         <Form.Group controlId="formName">
           <Form.Label>Your name</Form.Label>
           <Form.Control type="text" placeholder="Enter Yourname" />
