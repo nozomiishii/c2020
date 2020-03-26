@@ -1,19 +1,25 @@
 .header {
-  display: flex;
-  justify-content: space-between;
   margin-bottom: 3rem;
   padding: 1rem 0 3 rem;
   h1 {
     color: green;
   }
-  ul {
-    display: flex;
-    align-items: center;
-    list-style-type: none;
-    margin: 0;
+}
+
+.title {
+  padding: 0;
+}
+.menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  div {
+    margin-left: auto;
     a {
+      display: inline-block;
       color: #999;
-      margin-right: 1.3rem;
+      margin: 0.5rem;
       &:hover {
         color: greenyellow;
       }
