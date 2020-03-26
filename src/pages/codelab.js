@@ -19,7 +19,7 @@ const CodelabPage = () => {
           id
           name
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 800) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -49,7 +49,8 @@ const CodelabPage = () => {
             href={`https://nozomiishii.github.io/codeLab/${image.name}`}
             className={classes.card}
           >
-            <Img fluid={image.childImageSharp.fluid} loading="lazy" />
+            {/* default width is maxWidth: 800 for now */}
+            <Img fluid={image.childImageSharp.fluid} />
           </a>
           <p>
             {image.name.toUpperCase()} / {codeLabTitle[index][1]}

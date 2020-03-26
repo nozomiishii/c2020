@@ -1,0 +1,15 @@
+.contactSubmitted {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  margin: 2vh 0;
+  align-self: start;
+}
+
+.signature {
+  align-self: flex-end;
+}
