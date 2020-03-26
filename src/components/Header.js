@@ -17,7 +17,7 @@ const Header = () => (
           <Link to="/about" activeClassName={headerStyles.activeNavItem}>
             ABOUT
           </Link>
-          <Link to="/blog" activeClassName={headerStyles.activeNavItem}>
+          <Link to="/info" activeClassName={headerStyles.activeNavItem}>
             INFO
           </Link>
           <Link to="/codelab" activeClassName={headerStyles.activeNavItem}>

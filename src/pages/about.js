@@ -59,7 +59,7 @@ const AboutPage = () => {
             </Row>
           </div>
           <div>
-            <h4>Privious webpage</h4>
+            <h4>Previous webpage</h4>
             <Row>
               <Col xs={6}>
                 <a
