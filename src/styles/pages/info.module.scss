@@ -1,9 +1,11 @@
 .posts {
   list-style: none;
+  padding: 0;
   margin: 0;
 }
 
 .post {
+  height: 20vh;
   margin: 1rem 0;
   a {
     background: #f4f4f4;
@@ -16,7 +18,7 @@
     background: #e4e4e4;
   }
   img {
-    width: 10vw;
+    width: 10vh;
   }
   h3 {
     margin-bottom: 0;
