@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, graphql, useStaticQuery } from "gatsby";
 import Layout from "../components/Layout";
-import classes from "../styles/pages/blog.module.scss";
+import classes from "../styles/pages/info.module.scss";
 import Head from "../components/Head";
 
 const BlogPage = () => {
