@@ -83,15 +83,14 @@ const ContactPage = () => {
                 </Form.Text>
               </Form.Group>
 
-              <Form.Group controlId="fromTextArea">
+              <Form.Group controlId="formTextArea">
                 <Form.Label>Example textarea</Form.Label>
                 <Form.Control as="textarea" rows="3" required />
               </Form.Group>
 
-              <Form.Group
-                controlId="fromRecaptcha"
-                data-netlify-recaptcha="true"
-              ></Form.Group>
+              <Form.Group controlId="formRecaptcha">
+                <div data-netlify-recaptcha="true"></div>
+              </Form.Group>
               <Button className={classes.button} type="submit">
                 Submit
               </Button>
