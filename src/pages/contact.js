@@ -45,7 +45,7 @@ const ContactPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    fetch("/", {
+    fetch("/contact", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
@@ -53,7 +53,10 @@ const ContactPage = () => {
         ...state,
       }),
     })
-      .then(() => navigate(form.getAttribute("action")))
+      .then((data) => {
+        console.log(data);
+        navigate(form.getAttribute("action"));
+      })
       .catch((error) => alert(error));
   };
 
