@@ -102,7 +102,7 @@ const ContactPage = () => {
                 <Form.Control
                   type="text"
                   placeholder="Enter Yourname"
-                  name="form-name"
+                  name="name"
                   required
                   onChange={handleChange}
                 />
@@ -112,7 +112,7 @@ const ContactPage = () => {
                 <Form.Label>Email address</Form.Label>
                 <Form.Control
                   type="email"
-                  name="form-email"
+                  name="email"
                   placeholder="Enter email"
                   onChange={handleChange}
                   required
@@ -130,7 +130,7 @@ const ContactPage = () => {
                 <Form.Label>Example textarea</Form.Label>
                 <Form.Control
                   as="textarea"
-                  name="form-text"
+                  name="text"
                   rows="3"
                   onChange={handleChange}
                   required
