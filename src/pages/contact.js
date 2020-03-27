@@ -56,10 +56,11 @@ const ContactPage = () => {
           </Col>
           <Col md={6}>
             <Form
+              action="/contactSubmitted"
               name="contact"
               method="POST"
               data-netlify="true"
-              netlify-honeypot="bot-field"
+              // netlify-honeypot="bot-field"
               className={classes.form}
             >
               <Form.Group controlId="formName">
@@ -87,12 +88,12 @@ const ContactPage = () => {
                 <Form.Label>Example textarea</Form.Label>
                 <Form.Control as="textarea" rows="3" required />
               </Form.Group>
-              <p className={classes.hidden}>
+              {/* <p className={classes.hidden}>
                 <label>
                   Don’t fill this out if you're human:
                   <input name="bot-field" />
                 </label>
-              </p>
+              </p> */}
               <Button className={classes.button} type="submit">
                 Send
               </Button>
