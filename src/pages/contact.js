@@ -56,7 +56,6 @@ const ContactPage = () => {
           </Col>
           <Col md={6}>
             <Form
-              action="/contactSubmitted"
               name="contact"
               method="POST"
               data-netlify="true"
