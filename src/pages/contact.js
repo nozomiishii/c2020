@@ -60,6 +60,7 @@ const ContactPage = () => {
               name="contact"
               method="POST"
               data-netlify="true"
+              data-netlify-recaptcha="true"
             >
               <Form.Group controlId="formName">
                 <Form.Label>Your name</Form.Label>
