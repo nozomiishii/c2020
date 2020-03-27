@@ -60,7 +60,7 @@ const ContactPage = () => {
               name="contact"
               method="POST"
               data-netlify="true"
-              data-netlify-recaptcha="true"
+              netlify-honeypot="bot-field"
             >
               <Form.Group controlId="formName">
                 <Form.Label>Your name</Form.Label>
@@ -87,11 +87,14 @@ const ContactPage = () => {
                 <Form.Label>Example textarea</Form.Label>
                 <Form.Control as="textarea" rows="3" required />
               </Form.Group>
-
-              <div data-netlify-recaptcha="true"></div>
-
+              <p className={classes.hidden}>
+                <label>
+                  Don’t fill this out if you're human:
+                  <input name="bot-field" />
+                </label>
+              </p>
               <Button className={classes.button} type="submit">
-                Submit
+                Send
               </Button>
             </Form>
           </Col>
