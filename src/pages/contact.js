@@ -48,7 +48,7 @@ const ContactPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    fetch("/contact", {
+    fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
@@ -102,7 +102,7 @@ const ContactPage = () => {
                 <Form.Control
                   type="text"
                   placeholder="Enter Yourname"
-                  name="name"
+                  name="form-name"
                   required
                   onChange={handleChange}
                 />
@@ -112,7 +112,7 @@ const ContactPage = () => {
                 <Form.Label>Email address</Form.Label>
                 <Form.Control
                   type="email"
-                  name="email"
+                  name="form-email"
                   placeholder="Enter email"
                   onChange={handleChange}
                   required
@@ -130,7 +130,7 @@ const ContactPage = () => {
                 <Form.Label>Example textarea</Form.Label>
                 <Form.Control
                   as="textarea"
-                  name="text"
+                  name="form-text"
                   rows="3"
                   onChange={handleChange}
                   required
