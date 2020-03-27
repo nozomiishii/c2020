@@ -61,6 +61,7 @@ const ContactPage = () => {
               method="POST"
               data-netlify="true"
               netlify-honeypot="bot-field"
+              className={classes.form}
             >
               <Form.Group controlId="formName">
                 <Form.Label>Your name</Form.Label>
