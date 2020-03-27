@@ -55,15 +55,24 @@ const ContactPage = () => {
             />
           </Col>
           <Col md={6}>
-            <Form action="/contactSubmitted">
+            <Form
+              action="/contactSubmitted"
+              name="contact"
+              method="POST"
+              data-netlify="true"
+            >
               <Form.Group controlId="formName">
                 <Form.Label>Your name</Form.Label>
-                <Form.Control type="text" placeholder="Enter Yourname" />
+                <Form.Control
+                  type="text"
+                  placeholder="Enter Yourname"
+                  required
+                />
               </Form.Group>
 
               <Form.Group controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
+                <Form.Control type="email" placeholder="Enter email" required />
                 <Form.Text className="text-muted">
                   I'll never share your information with anyone else.
                   <br />
@@ -75,8 +84,13 @@ const ContactPage = () => {
 
               <Form.Group controlId="fromTextArea">
                 <Form.Label>Example textarea</Form.Label>
-                <Form.Control as="textarea" rows="3" />
+                <Form.Control as="textarea" rows="3" required />
               </Form.Group>
+
+              <Form.Group
+                controlId="fromRecaptcha"
+                data-netlify-recaptcha="true"
+              ></Form.Group>
               <Button className={classes.button} type="submit">
                 Submit
               </Button>
