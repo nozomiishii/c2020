@@ -39,7 +39,10 @@ const ContactPage = () => {
   const [state, setState] = React.useState({});
 
   const handleChange = (e) => {
-    setState({ ...state, [e.target.name]: e.target.value });
+    const key = e.target.name;
+    const value = e.target.value;
+    setState({ ...state, [key]: value });
+    console.log(state);
   };
 
   const handleSubmit = (e) => {
@@ -88,7 +91,7 @@ const ContactPage = () => {
             <Form
               action="/contactSubmitted"
               name="contact"
-              method="POST"
+              method="post"
               data-netlify="true"
               onSubmit={handleSubmit}
               className={classes.form}
@@ -99,7 +102,7 @@ const ContactPage = () => {
                 <Form.Control
                   type="text"
                   placeholder="Enter Yourname"
-                  name="form-name"
+                  name="name"
                   required
                   onChange={handleChange}
                 />
@@ -109,7 +112,7 @@ const ContactPage = () => {
                 <Form.Label>Email address</Form.Label>
                 <Form.Control
                   type="email"
-                  name="form-email"
+                  name="email"
                   placeholder="Enter email"
                   onChange={handleChange}
                   required
@@ -127,7 +130,7 @@ const ContactPage = () => {
                 <Form.Label>Example textarea</Form.Label>
                 <Form.Control
                   as="textarea"
-                  name="form-text"
+                  name="text"
                   rows="3"
                   onChange={handleChange}
                   required
