@@ -88,9 +88,8 @@ const ContactPage = () => {
                 <Form.Control as="textarea" rows="3" required />
               </Form.Group>
 
-              <Form.Group controlId="formRecaptcha">
-                <div data-netlify-recaptcha="true"></div>
-              </Form.Group>
+              <div data-netlify-recaptcha="true"></div>
+
               <Button className={classes.button} type="submit">
                 Submit
               </Button>
