@@ -27,20 +27,21 @@ const sketch = (p) => {
     p.createCanvas(p.windowWidth, p.windowHeight * 0.7);
   };
 
+  let titleX = p.windowWidth * 0.5;
   p.draw = () => {
     p.background(0);
     p.textSize(46);
     p.fill(255);
     p.textAlign(p.CENTER);
-    p.text(
-      "DANCE + CODE + ART = ME!!!",
-      p.windowWidth * 0.5,
-      p.windowHeight * 0.3
-    );
     p.text("👨🏻‍🚀", p.mouseX, p.mouseY);
+
+    p.textSize(22);
+    p.text("DANCE + CODE + ART = ME!!!", titleX, p.windowHeight * 0.3);
+
     for (beam of beams) {
       beam.shoot();
     }
+    // p.noLoop();
   };
 };
 
