@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import Head from "../components/Head";
 // import P5Wrapper from "react-p5-wrapper";
-import sketch from "../components/sketch";
+import sketch from "../canvas/sketch";
 import classes from "../styles/pages/index.module.scss";
 // import loadable from "@loadable/component";
 import Loadable from "react-loadable";
