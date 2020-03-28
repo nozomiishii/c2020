@@ -30,6 +30,13 @@ const sketch = (p) => {
   p.draw = () => {
     p.background(0);
     p.textSize(46);
+    p.fill(255);
+    p.textAlign(p.CENTER);
+    p.text(
+      "DANCE + CODE + ART = ME!!!",
+      p.windowWidth * 0.5,
+      p.windowHeight * 0.3
+    );
     p.text("👨🏻‍🚀", p.mouseX, p.mouseY);
     for (beam of beams) {
       beam.shoot();
