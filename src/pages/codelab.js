@@ -66,6 +66,7 @@ const CodelabPage = () => {
       <Container>
         <Head title="CODE LAB" />
         <h2>Codelab</h2>
+        {/* <p>2019年10月20日から毎日100日間</p> */}
         <Row>{displayImages()}</Row>
       </Container>
     </Layout>
