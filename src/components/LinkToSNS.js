@@ -10,7 +10,13 @@ const LinkToSNS = () => {
   return (
     <div className={classes.links}>
       {sns.map(({ name, href }) => (
-        <a href={href} target="_blank" rel="noopener noreferrer" key={name}>
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          key={name}
+          className="my-3"
+        >
           {name.toUpperCase()}
         </a>
       ))}
