@@ -1,0 +1,24 @@
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 70vh;
+}
+
+.emoji {
+  display: inline-block;
+  animation: loading 3s infinite linear;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
