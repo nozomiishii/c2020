@@ -61,7 +61,6 @@ const sketch = (p) => {
       }
       if (beams[i].y < 0) {
         beams.splice(i, 1);
-        console.log(beams.length, beams);
       }
     }
   };
