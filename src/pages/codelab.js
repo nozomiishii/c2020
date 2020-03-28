@@ -66,7 +66,8 @@ const CodelabPage = () => {
       <Container>
         <Head title="CODE LAB" />
         <h2>Codelab</h2>
-        {/* <p>2019年10月20日から毎日100日間</p> */}
+        <p>100 days of creating code since 20th Oct 2019</p>
+        <p>2019年10月20日から毎日100日間つくった作品</p>
         <Row>{displayImages()}</Row>
       </Container>
     </Layout>
