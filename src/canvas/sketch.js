@@ -39,28 +39,31 @@ const sketch = (p) => {
     p.textSize(46);
     p.fill(255);
     p.textAlign(p.CENTER);
-    p.text("👨🏻‍🚀", p.mouseX, p.mouseY);
 
-    // p.rectMode(p.CENTER);
-    // p.rect(title.x, title.y, p.textWidth(title.name) / 2, title.height);
+    if (p.mouseX) {
+      p.text("👨🏻‍🚀", p.mouseX, p.mouseY);
+    } else {
+      p.text("👨🏻‍🚀", p.windowWidth / 2, p.windowHeight * 0.6);
+    }
 
     p.fill(255);
     p.textSize(title.height);
     p.text(title.name, title.x, title.y);
 
-    for (beam of beams) {
-      beam.shoot();
-      let dx = Math.abs(beam.x - title.x);
-      let dy = Math.abs(beam.y - title.y);
+    for (let i = 0; i < beams.length; i++) {
+      beams[i].shoot();
+      let dx = Math.abs(beams[i].x - title.x);
+      let dy = Math.abs(beams[i].y - title.y);
       if (dx < p.textWidth(title.name) / 2 && dy < title.height) {
-        console.log("hit");
         p.fill(p.random(255), p.random(255), p.random(255));
         p.textSize(title.height);
         p.text(title.name, title.x, title.y);
       }
+      if (beams[i].y < 0) {
+        beams.splice(i, 1);
+        console.log(beams.length, beams);
+      }
     }
-
-    // p.noLoop();
   };
 };
 
