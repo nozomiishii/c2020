@@ -52,8 +52,8 @@ const AboutPage = () => {
                 <p>
                   React, GraphQL, Gatsby.js, Contentful, JavaScript, HTML, CSS,
                   SCSS, Bootstrap4, p5.js, ml5.js, npm, yarn, Node.js, webpack4,
-                  Babel, Express, MangoDB, Firebase Jest, Enzyme, ESLint, Visual
-                  Studio Code, iTerm2, Homebrew, GitHub, Heroku
+                  Babel, Express, MangoDB, Firebase, Jest, Enzyme, ESLint,
+                  Visual Studio Code, iTerm2, Homebrew, GitHub, Heroku
                 </p>
               </Col>
             </Row>
