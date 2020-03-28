@@ -1,14 +1,14 @@
 .loading {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: center;
-  width: 100vw;
   height: 70vh;
+  width: 100vw;
 }
 
 .emoji {
-  display: inline-block;
   animation: loading 3s infinite linear;
+  display: inline-block;
 }
 
 @keyframes loading {

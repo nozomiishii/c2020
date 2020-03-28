@@ -1,7 +1,7 @@
 .card {
-  width: 100%;
   display: inline-block;
   transition-duration: 1s;
+  width: 100%;
   &:hover {
     transform: translateY(-20px);
   }

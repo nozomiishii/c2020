@@ -12,10 +12,10 @@
 }
 
 .button {
-  float: right;
-  color: green;
   background: white;
   border: 3px solid green;
+  color: green;
+  float: right;
   &:hover {
     background: green;
     border: 3px solid green;

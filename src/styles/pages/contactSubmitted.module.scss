@@ -1,13 +1,13 @@
 .contactSubmitted {
-  width: 70%;
-  margin: auto;
   display: flex;
   flex-direction: column;
+  margin: auto;
+  width: 70%;
 }
 
 .message {
-  margin: 2vh 0;
   align-self: start;
+  margin: 2vh 0;
 }
 
 .signature {

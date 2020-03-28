@@ -1,6 +1,6 @@
 * {
-  text-decoration: none;
   color: #666666;
+  text-decoration: none;
 }
 
 body {
@@ -8,12 +8,12 @@ body {
 }
 
 .container {
-  margin: 0 auto;
-  max-width: 750px;
-  padding: 1rem;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  max-width: 750px;
   min-height: 100vh;
+  padding: 1rem;
 }
 
 .content {
