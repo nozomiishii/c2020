@@ -20,9 +20,9 @@ const sketch = (p) => {
     beams.push(beam);
   };
 
-  p.windowResized = () => {
-    p.resizeCanvas(p.windowWidth, p.windowHeight * 0.7);
-  };
+  // p.windowResized = () => {
+  //   p.resizeCanvas(p.windowWidth, p.windowHeight * 0.7);
+  // };
   p.setup = () => {
     p.createCanvas(p.windowWidth, p.windowHeight * 0.7);
   };
