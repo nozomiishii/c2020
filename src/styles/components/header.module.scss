@@ -16,6 +16,9 @@
   width: 100%;
   div {
     margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
     a {
       color: #999;
       display: inline-block;

@@ -15,7 +15,7 @@ const Header = () => {
           </Link>
         </Col>
         <Col md={7} className={headerStyles.menu}>
-          <Row>
+          <div>
             {/* {links.map((link) => (
               <Link to={`/${link}`} activeClassName={headerStyles.activeNavItem}>
                 {link.toUpperCase()}
@@ -33,7 +33,7 @@ const Header = () => {
             <Link to="/contact" activeClassName={headerStyles.activeNavItem}>
               CONTACT
             </Link>
-          </Row>
+          </div>
         </Col>
       </Row>
     </Container>
