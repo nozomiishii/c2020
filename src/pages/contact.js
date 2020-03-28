@@ -131,7 +131,7 @@ const ContactPage = () => {
                 <Form.Control
                   as="textarea"
                   name="text"
-                  rows="3"
+                  rows="7"
                   onChange={handleChange}
                   required
                 />
