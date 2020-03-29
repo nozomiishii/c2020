@@ -2,6 +2,7 @@ import React from "react";
 import classes from "../styles/components/loading.module.scss";
 
 class Loading extends React.Component {
+  _isMounted = false;
   constructor(props) {
     super(props);
     this.state = {
@@ -9,28 +10,36 @@ class Loading extends React.Component {
     };
   }
   componentDidMount() {
-    this.setState((prevState) => ({ count: prevState.count + 1 }));
-    console.log("did");
+    this._isMounted = true;
+    if (this._isMounted) {
+      this.setState((prevState) => ({ count: prevState.count + 1 }));
+    }
   }
   componentDidUpdate(prevProps, prevState) {
-    if (prevState.count < 98) {
-      return setTimeout(
-        () =>
-          this.setState((prevState) => ({
-            count: prevState.count + 1,
-          })),
-        10
-      );
+    this._isMounted = true;
+    if (this._isMounted) {
+      if (prevState.count < 98) {
+        return setTimeout(
+          () =>
+            this.setState((prevState) => ({
+              count: prevState.count + 1,
+            })),
+          10
+        );
+      }
+      if (prevState.count >= 98) {
+        return setTimeout(
+          () =>
+            this.setState((prevState) => ({
+              count: (prevState.count * 10 + 1) / 10,
+            })),
+          1000
+        );
+      }
     }
-    if (prevState.count >= 98) {
-      return setTimeout(
-        () =>
-          this.setState((prevState) => ({
-            count: (prevState.count * 10 + 1) / 10,
-          })),
-        1000
-      );
-    }
+  }
+  componentWillUnmount() {
+    this._isMounted = false;
   }
 
   render() {
