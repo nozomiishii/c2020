@@ -24,7 +24,7 @@ const BlogPage = () => {
       }
     }
   `);
-  console.log(data.allContentfulBlogPost.edges[0].node.media.fluid.src);
+  // console.log(data.allContentfulBlogPost.edges[0].node.media.fluid.src);
   return (
     <Layout>
       <Head title="INFO" />
