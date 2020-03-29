@@ -12,17 +12,51 @@
 }
 
 .button {
-  width: 180px;
   background: white;
   border: 3px solid green;
   color: green;
   float: right;
+  height: 60px;
+  width: 140px;
   &:hover {
     background: green;
-    border: 3px solid green;
+    border: 5px solid green;
+    color: white;
+  }
+  &:active {
+    background: green;
+    border: 5px solid green;
+    opacity: 0.7;
   }
 }
 
 .hidden {
   display: none;
+}
+.show {
+  display: flex;
+}
+
+.sendingEmail {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+}
+
+.emailEmoji {
+  animation: emailingEmoji 5s infinite linear;
+}
+
+@keyframes emailingEmoji {
+  0% {
+    transform: translateY(5vh);
+  }
+  100% {
+    transform: translateY(-60vh);
+  }
 }
