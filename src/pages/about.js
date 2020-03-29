@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
-import aboutStyles from "../styles/pages/about.module.scss";
+import classes from "../styles/pages/about.module.scss";
 import Head from "../components/Head";
 import LinkToSNS from "../components/LinkToSNS";
 import { useStaticQuery, graphql } from "gatsby";
@@ -38,11 +38,13 @@ const AboutPage = () => {
       <Row>
         <Col md={7}>
           <Head title="ABOUT" />
-          <div className={aboutStyles.about}>
+          <div className={classes.about}>
             <Row>
               <Col xs={5}>
                 <Img fluid={profile.childImageSharp.fluid} />
-                <LinkToSNS />
+                <div className={classes.links}>
+                  <LinkToSNS />
+                </div>
               </Col>
               <Col xs={7}>
                 <h4>Nozomi Ishii</h4>

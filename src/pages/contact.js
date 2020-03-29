@@ -93,10 +93,17 @@ const ContactPage = () => {
               name="contact"
               method="post"
               data-netlify="true"
+              data-netlify-honeypot="bot-field"
               onSubmit={handleSubmit}
               className={classes.form}
             >
               <input type="hidden" name="form-name" value="contact" />
+              <p hidden>
+                <label>
+                  Don’t fill this out:
+                  <input name="bot-field" onChange={handleChange} />
+                </label>
+              </p>
               <Form.Group controlId="formName">
                 <Form.Label>Your name</Form.Label>
                 <Form.Control
