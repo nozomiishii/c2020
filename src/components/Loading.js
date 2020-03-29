@@ -19,7 +19,7 @@ class Loading extends React.Component {
           this.setState((prevState) => ({
             count: prevState.count + 1,
           })),
-        100
+        10
       );
     }
     if (prevState.count >= 98) {
