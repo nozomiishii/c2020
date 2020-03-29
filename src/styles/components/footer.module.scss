@@ -1,5 +1,16 @@
 .footer {
   display: flex;
-  margin-top: 3rem;
+  justify-content: space-between;
+  margin: 2rem 0;
   padding: 0;
+}
+
+.links {
+  a {
+    color: #777777;
+    margin-left: 1.4rem;
+    &:visited {
+      color: #777777;
+    }
+  }
 }

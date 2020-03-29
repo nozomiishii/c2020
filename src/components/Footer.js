@@ -4,8 +4,12 @@ import LinkToSNS from "./LinkToSNS";
 
 const Footer = () => (
   <div className={footerStyles.footer}>
-    <LinkToSNS />
-    <p>© 2020 NOZOMI ISHII</p>
+    <div>
+      <p>© 2020 NOZOMI ISHII</p>
+    </div>
+    <div className={footerStyles.links}>
+      <LinkToSNS />
+    </div>
   </div>
 );
 
