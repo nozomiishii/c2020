@@ -9,18 +9,18 @@ import Loading from "../components/Loading";
 class IndexPage extends React.Component {
   render() {
     if (typeof window !== "undefined") {
-      // const P5Wrapper = Loadable({
-      //   loader: () => import("react-p5-wrapper"),
-      //   loading: Loading,
-      // });
+      const P5Wrapper = Loadable({
+        loader: () => import("react-p5-wrapper"),
+        loading: Loading,
+      });
 
       return (
         <div className={classes.index}>
           <Layout>
             <Head title="HOME" />
             <div className={classes.sketch}>
-              {/* <P5Wrapper sketch={sketch} /> */}
-              <Loading />
+              <P5Wrapper sketch={sketch} />
+              {/* <Loading /> */}
             </div>
           </Layout>
         </div>
