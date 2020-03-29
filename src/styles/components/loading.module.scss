@@ -1,9 +1,22 @@
 .loading {
   align-items: center;
+  background: #231f22;
   display: flex;
   justify-content: center;
   height: 70vh;
   width: 100vw;
+  h3 {
+    animation: loadingTitle 2s infinite alternate linear;
+  }
+}
+
+@keyframes loadingTitle {
+  0% {
+    color: #231f22;
+  }
+  100% {
+    color: white;
+  }
 }
 
 .emoji {
