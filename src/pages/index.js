@@ -1,9 +1,9 @@
 import React from "react";
 import Layout from "../components/Layout";
 import Head from "../components/Head";
-// import sketch from "../canvas/sketch";
+import sketch from "../canvas/sketch";
 import classes from "../styles/pages/index.module.scss";
-// import Loadable from "react-loadable";
+import Loadable from "react-loadable";
 import Loading from "../components/Loading";
 
 class IndexPage extends React.Component {
