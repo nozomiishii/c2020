@@ -20,14 +20,15 @@ const Linklist = () => {
 const Header = () => {
   const handleClick = (e) => {
     e.preventDefault();
-    console.log("hit");
-
+    // props.displayModal();
+    const navbar = document.getElementById("navbar");
+    navbar.classList.toggle(headerStyles.openNaebar);
     const linklist = document.querySelector("#headerLinkList");
     linklist.classList.toggle(headerStyles.show);
   };
   return (
     <React.Fragment>
-      <Row className={headerStyles.header}>
+      <Row id="navbar" className={headerStyles.header}>
         <Col xs={7} md={5} className={headerStyles.title}>
           <Link to="/">
             <h1>NOZOMI ISHII</h1>

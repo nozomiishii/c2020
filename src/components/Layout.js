@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import classes from "../styles/components/layout.module.scss";
 
 const Layout = (props) => {
-  console.log(props.gameMode);
+  // console.log(props.gameMode);
   const headerBgColor = () => props.gameMode && classes.indexHeaderLayout;
   return (
     <React.Fragment>
