@@ -39,7 +39,6 @@
 
 @media all and (max-width: 670px) {
   .header {
-    background-color: rgba(255, 255, 255, 0.9);
     h1 {
       font-size: 1.6rem;
       margin-bottom: 0;
@@ -54,7 +53,7 @@
       padding-bottom: 0;
     }
     button {
-      background: white;
+      background: inherit;
       border: 3px solid green;
       color: green;
       display: block;

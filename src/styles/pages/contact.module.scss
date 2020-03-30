@@ -12,8 +12,10 @@
 }
 
 .button {
-  background: white;
-  border: 3px solid green;
+  background: inherit;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  border: 4px solid green;
   color: green;
   float: right;
   height: 60px;

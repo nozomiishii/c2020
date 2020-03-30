@@ -7,10 +7,11 @@ img {
 }
 .links {
   margin-top: 2rem;
+  display: flex;
+  align-items: center;
   width: 100%;
   a {
     color: green;
-    display: block;
-    margin: 0.3rem;
+    margin-right: 1.4rem;
   }
 }

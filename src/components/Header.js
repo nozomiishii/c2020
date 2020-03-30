@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
 import headerStyles from "../styles/components/header.module.scss";
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
@@ -27,7 +26,7 @@ const Header = () => {
     linklist.classList.toggle(headerStyles.show);
   };
   return (
-    <Container>
+    <React.Fragment>
       <Row className={headerStyles.header}>
         <Col xs={7} md={5} className={headerStyles.title}>
           <Link to="/">
@@ -41,7 +40,7 @@ const Header = () => {
           </div>
         </Col>
       </Row>
-    </Container>
+    </React.Fragment>
   );
 };
 

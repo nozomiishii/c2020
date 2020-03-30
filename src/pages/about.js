@@ -44,14 +44,14 @@ const AboutPage = () => {
                 <Img fluid={profile.childImageSharp.fluid} />
               </Col>
               <Col xs={7}>
-                <div className={classes.links}>
-                  <LinkToSNS />
-                </div>
+                <h4>Nozomi Ishii</h4>
+                <h4>いしいのぞみ</h4>
+                <h6>Front-End web developer</h6>
               </Col>
             </Row>
-            <h4>Nozomi Ishii</h4>
-            <h4>いしいのぞみ</h4>
-            <h6>Front-End web developer</h6>
+            <div className={classes.links}>
+              <LinkToSNS />
+            </div>
             <h5 className="mt-5">Skill-set</h5>
             <p>
               React, GraphQL, Gatsby.js, Contentful, JavaScript, HTML, CSS,

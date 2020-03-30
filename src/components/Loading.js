@@ -25,7 +25,7 @@ class Loading extends React.Component {
           this.setState((prevState) => ({
             count: (prevState.count * 10 + 1) / 10,
           })),
-        1000
+        2000
       ));
     }
     if (this._isMounted && prevState.count < 97) {
