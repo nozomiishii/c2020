@@ -1,5 +1,5 @@
 .header {
-  max-width: 860px;
+  max-width: 960px;
   // border: 1px solid blue;
   padding: 1rem 0;
   height: 10vh;
@@ -34,7 +34,7 @@
       }
     }
     .active-nav-item {
-      color: rgb(11, 104, 11);
+      color: green;
       border-bottom: 2px solid #007bff;
     }
   }

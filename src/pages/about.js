@@ -36,7 +36,7 @@ const AboutPage = () => {
     <Layout>
       <h2>Nozomi Ishii who?</h2>
       <Row>
-        <Col md={7}>
+        <Col md={8}>
           <Head title="ABOUT" />
           <div className={classes.about}>
             <Row>
@@ -80,7 +80,7 @@ const AboutPage = () => {
             <h4>Works</h4>
           </div> */}
         </Col>
-        <Col md={5}>
+        <Col md={4}>
           <TwitterTimelineEmbed
             sourceType="profile"
             screenName="nozomiishii_jp"
