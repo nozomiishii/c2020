@@ -42,23 +42,23 @@ const AboutPage = () => {
             <Row>
               <Col xs={5}>
                 <Img fluid={profile.childImageSharp.fluid} />
+              </Col>
+              <Col xs={7}>
                 <div className={classes.links}>
                   <LinkToSNS />
                 </div>
               </Col>
-              <Col xs={7}>
-                <h4>Nozomi Ishii</h4>
-                <h4>いしいのぞみ</h4>
-                <h6>Front-End web developer</h6>
-                <h5 className="mt-5">Skill-set</h5>
-                <p>
-                  React, GraphQL, Gatsby.js, Contentful, JavaScript, HTML, CSS,
-                  SCSS, Bootstrap4, p5.js, ml5.js, npm, yarn, Node.js, webpack4,
-                  Babel, Express, MangoDB, Firebase, Jest, Enzyme, ESLint,
-                  Visual Studio Code, iTerm2, Homebrew, GitHub, Heroku
-                </p>
-              </Col>
             </Row>
+            <h4>Nozomi Ishii</h4>
+            <h4>いしいのぞみ</h4>
+            <h6>Front-End web developer</h6>
+            <h5 className="mt-5">Skill-set</h5>
+            <p>
+              React, GraphQL, Gatsby.js, Contentful, JavaScript, HTML, CSS,
+              SCSS, Bootstrap4, p5.js, ml5.js, npm, yarn, Node.js, webpack4,
+              Babel, Express, MangoDB, Firebase, Jest, Enzyme, ESLint, Visual
+              Studio Code, iTerm2, Homebrew, GitHub, Heroku
+            </p>
           </div>
           <div>
             <h4>Previous webpage</h4>
