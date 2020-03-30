@@ -7,6 +7,12 @@ import sketch from "../canvas/sketch";
 import Loadable from "react-loadable";
 
 class IndexPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      gameMode: true,
+    };
+  }
   render() {
     if (typeof window !== "undefined") {
       const P5Wrapper = Loadable({
@@ -16,7 +22,7 @@ class IndexPage extends React.Component {
 
       return (
         <div className={classes.index}>
-          <Layout>
+          <Layout gameMode={this.state.gameMode}>
             <Head title="HOME" />
             <div className={classes.sketch}>
               <P5Wrapper sketch={sketch} />
