@@ -9,7 +9,6 @@ body {
 }
 
 .container {
-  display: flex;
   flex-direction: column;
   margin: 0 auto;
   max-width: 860px;
@@ -18,9 +17,19 @@ body {
 }
 
 .content {
+  padding-top: 15vh;
   flex-grow: 1;
 }
 
 img {
   max-width: 100%;
+}
+
+.headerLayout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  // border: 1px solid red;
+  width: 100vw;
+  z-index: 10;
 }

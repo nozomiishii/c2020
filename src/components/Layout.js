@@ -3,14 +3,19 @@ import Header from "./Header";
 import Footer from "./Footer";
 import "../styles/base/theme.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
-import layoutStyles from "../styles/components/layout.module.scss";
+import classes from "../styles/components/layout.module.scss";
 
 const Layout = (props) => (
-  <div className={layoutStyles.container}>
-    <Header />
-    <div className={layoutStyles.content}>{props.children}</div>
-    <Footer />
-  </div>
+  <React.Fragment>
+    <div className={classes.headerLayout}>
+      <Header />
+    </div>
+    <div className={classes.container}>
+      {/* <Header hidden /> */}
+      <div className={classes.content}>{props.children}</div>
+      <Footer />
+    </div>
+  </React.Fragment>
 );
 
 export default Layout;
