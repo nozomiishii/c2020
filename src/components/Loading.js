@@ -18,16 +18,16 @@ class Loading extends React.Component {
     }
   }
   componentDidUpdate(prevProps, prevState) {
-    if (this._isMounted && prevState.count >= 97) {
+    if (this._isMounted && prevState.count >= 95) {
       return (timer2 = setTimeout(
         () =>
           this.setState((prevState) => ({
             count: (prevState.count * 10 + 1) / 10,
           })),
-        2000
+        1000
       ));
     }
-    if (this._isMounted && prevState.count < 97) {
+    if (this._isMounted && prevState.count < 95) {
       return (timer1 = setTimeout(
         () =>
           this.setState((prevState) => ({
