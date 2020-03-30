@@ -12,12 +12,13 @@ body {
   flex-direction: column;
   margin: 0 auto;
   max-width: 860px;
-  min-height: 100vh;
+
   padding: 1rem;
 }
 
 .content {
   padding-top: 15vh;
+  min-height: 90vh;
   flex-grow: 1;
 }
 

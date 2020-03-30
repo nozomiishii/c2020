@@ -139,7 +139,7 @@ const ContactPage = () => {
               </Form.Group>
 
               <Form.Group controlId="formTextArea">
-                <Form.Label>Example textarea</Form.Label>
+                <Form.Label>Message</Form.Label>
                 <Form.Control
                   as="textarea"
                   name="text"
