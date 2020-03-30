@@ -5,4 +5,23 @@
   &:hover {
     transform: translateY(-20px);
   }
+  a {
+    text-decoration: none;
+  }
+  div {
+    padding-top: 1rem;
+  }
+}
+
+.cards {
+  animation: floating 6s infinite alternate linear;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(-10px, -10px);
+  }
+  100% {
+    transform: translate(10px, 10px);
+  }
 }

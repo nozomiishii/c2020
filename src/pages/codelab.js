@@ -43,18 +43,17 @@ const CodelabPage = () => {
     // console.log(sortedSource);
     return sortedSource.map((image, index) => {
       return (
-        <Col xs={6} lg={3} key={image.id} className="my-4">
-          <a
-            href={`https://nozomiishii.github.io/codeLab/${image.name}`}
-            className={classes.card}
-          >
+        <Col xs={6} lg={3} key={image.id} className={`my-4 ${classes.card}`}>
+          <a href={`https://nozomiishii.github.io/codeLab/${image.name}`}>
             {/* default width is maxWidth: 800 for now */}
             <Img fluid={image.childImageSharp.fluid} />
+            <div>
+              <p>
+                {image.name.toUpperCase()} / {codeLabTitle[index][1]}
+              </p>
+              <p>- {codeLabTitle[index][2]} -</p>
+            </div>
           </a>
-          <p>
-            {image.name.toUpperCase()} / {codeLabTitle[index][1]}
-          </p>
-          <p>- {codeLabTitle[index][2]} -</p>
         </Col>
       );
     });
@@ -66,7 +65,7 @@ const CodelabPage = () => {
       <h2>Codelab</h2>
       <p>100 days of creating code since 20th Oct 2019.</p>
       <p>2019年10月20日から毎日100日間つくった作品</p>
-      <Row>{displayImages()}</Row>
+      <Row className={classes.cards}>{displayImages()}</Row>
     </Layout>
   );
 };
