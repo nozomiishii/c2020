@@ -65,7 +65,7 @@ const AboutPage = () => {
             <Row>
               <Col xs={6}>
                 <a
-                  href="http://www.nozomiishii.jp/"
+                  href="https://nozomiishii.herokuapp.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
