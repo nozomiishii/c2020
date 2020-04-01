@@ -10,6 +10,13 @@ const Head = ({ title = "welcome!" }) => {
           auther
         }
       }
+      file(relativePath: { eq: "images/metaData/c2020.png" }) {
+        childImageSharp {
+          fluid {
+            src
+          }
+        }
+      }
     }
   `);
   return (
@@ -17,10 +24,10 @@ const Head = ({ title = "welcome!" }) => {
       title={`${title} | ${data.site.siteMetadata.auther}`}
       meta={[
         { name: "twitter:card", content: "summary_large_image" },
-        { property: "og:image", content: "path/to/og_image" },
+        { property: "og:image", content: data.file.childImageSharp.fluid.src },
         { property: "og:title", content: "NOZOMI ISHII" },
         { property: "og:description", content: "webpage for 2020" },
-        // { property: 'og:url', content: `hoge_domain${props.path}` }
+        { name: "twitter:site", content: "@nozomiishii_jp" },
       ]}
     />
   );
