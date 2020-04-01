@@ -19,6 +19,7 @@ const Head = ({ title = "welcome!" }) => {
       }
     }
   `);
+  // console.log(data.file.childImageSharp.fluid.s rc);
   return (
     <Helmet
       title={`${title} | ${data.site.siteMetadata.auther}`}
