@@ -25,10 +25,11 @@ const Head = ({ title = "welcome!" }) => {
       title={`${title} | ${data.site.siteMetadata.auther}`}
       meta={[
         { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:site", content: "@nozomiishii_jp" },
         { property: "og:image", content: data.file.childImageSharp.fluid.src },
         { property: "og:title", content: "NOZOMI ISHII" },
         { property: "og:description", content: "webpage for 2020" },
-        { name: "twitter:site", content: "@nozomiishii_jp" },
+        { property: "og:url", content: "https://www.nozomiishii.jp/" },
       ]}
     />
   );
