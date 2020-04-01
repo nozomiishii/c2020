@@ -40,7 +40,10 @@ const Head = ({ description, lang, meta, title }) => {
         },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:site", content: "@nozomiishii_jp" },
-        { property: "og:image", content: data.file.childImageSharp.fluid.src },
+        {
+          property: "og:image",
+          content: `${data.file.childImageSharp.fluid.src}`,
+        },
         { property: "og:title", content: "NOZOMI ISHII" },
         { property: "og:description", content: "webpage for 2020" },
         { property: "og:url", content: "https://www.nozomiishii.jp/" },
