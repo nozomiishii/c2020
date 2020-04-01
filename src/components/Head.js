@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 
 const Head = ({ description, lang, meta, title }) => {
-  const { site } = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
@@ -32,7 +32,7 @@ const Head = ({ description, lang, meta, title }) => {
       meta={[
         {
           name: "description",
-          content: site.siteMetadata.description,
+          content: data.site.siteMetadata.description,
         },
         {
           property: "og:type",
