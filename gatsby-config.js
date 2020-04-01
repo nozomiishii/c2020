@@ -2,6 +2,8 @@ module.exports = {
   siteMetadata: {
     title: "c2020",
     auther: "NOZOMI ISHII",
+    description:
+      "Web developer with a keen interest in dance, art and front-end technologies.",
   },
   plugins: [
     {
