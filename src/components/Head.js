@@ -46,17 +46,18 @@ const Head = ({ title }) => {
       //   { property: "og:url", content: "https://www.nozomiishii.jp/" },
       // ]}
     >
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@nozomiishii_jp" />
-      <meta name="twitter:title" content="nozomiishii.jp" />
+      <meta property="og:title" content="nozomiishii.jp" />
       <meta
-        name="twitter:description"
+        property="og:description"
         content={data.site.siteMetadata.description}
       />
       <meta
-        name="twitter:image"
+        property="og:image"
         content={`https://www.nozomiishii.jp${data.file.childImageSharp.fluid.src}`}
       />
-      <meta name="twitter:card" content="summary_large_image" />
+      <meta property="og:type" content="website" />
       <meta name="description" content={data.site.siteMetadata.description} />
     </Helmet>
   );
