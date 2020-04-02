@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout";
 import classes from "../styles/pages/about.module.scss";
-import Head from "../components/Head";
+import SEO from "../components/SEO";
 import LinkToSNS from "../components/LinkToSNS";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
@@ -37,7 +37,7 @@ const AboutPage = () => {
       <h2>Nozomi Ishii who?</h2>
       <Row>
         <Col md={8}>
-          <Head title="ABOUT" />
+          <SEO title="ABOUT" />
           <div className={classes.about}>
             <Row>
               <Col xs={5}>

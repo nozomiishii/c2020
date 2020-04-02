@@ -2,7 +2,7 @@ import React from "react";
 import { Link, graphql, useStaticQuery } from "gatsby";
 import Layout from "../components/Layout";
 import classes from "../styles/pages/info.module.scss";
-import Head from "../components/Head";
+import SEO from "../components/SEO";
 
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
@@ -27,7 +27,7 @@ const BlogPage = () => {
   // console.log(data.allContentfulBlogPost.edges[0].node.media.fluid.src);
   return (
     <Layout>
-      <Head title="INFO" />
+      <SEO title="INFO" />
       <h2>Information</h2>
       <p>お知らせ</p>
       <ol className={classes.posts}>

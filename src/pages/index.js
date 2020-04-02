@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
-import Head from "../components/Head";
+import SEO from "../components/SEO";
 import classes from "../styles/pages/index.module.scss";
 import Loading from "../components/Loading";
 import sketch from "../canvas/sketch";
@@ -23,7 +23,7 @@ class IndexPage extends React.Component {
       return (
         <div className={classes.index}>
           <Layout gameMode={this.state.gameMode}>
-            <Head title="HOME" />
+            <SEO title="HOME" />
             <div className={classes.sketch}>
               <P5Wrapper sketch={sketch} />
               {/* <Loading /> */}
