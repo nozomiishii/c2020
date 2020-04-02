@@ -43,7 +43,7 @@ const SEO = ({ description, lang, meta, title }) => {
         { name: "twitter:site", content: "@nozomiishii_jp" },
         {
           property: "og:image",
-          content: `https://www.nozomiishii.jp/${data.file.childImageSharp.fluid.src}`,
+          content: `https://www.nozomiishii.jp${data.file.childImageSharp.fluid.src}`,
         },
         { property: "og:title", content: "NOZOMI ISHII" },
         { property: "og:description", content: "webpage for 2020" },
