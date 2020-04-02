@@ -1,10 +1,10 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 // import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 import imgUrl from "../../static/c2020.png";
 
-const Head = ({ title }) => {
+const Head = ({ description, lang, meta, title }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -16,9 +16,13 @@ const Head = ({ title }) => {
       }
     }
   `);
+  // const metaDescription = description || site.siteMetadata.description;
   // console.log(data.file.childImageSharp.fluid.s rc);
   return (
     <Helmet
+      // htmlAttributes={{
+      //   lang,
+      // }}
       title={`${title} | ${data.site.siteMetadata.auther}`}
       // meta={[
       //   {
