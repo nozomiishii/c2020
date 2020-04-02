@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 // import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 
-const Head = ({ description, lang, meta, title }) => {
+const Head = ({ title }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -25,30 +25,39 @@ const Head = ({ description, lang, meta, title }) => {
   // console.log(data.file.childImageSharp.fluid.s rc);
   return (
     <Helmet
-      htmlAttributes={{
-        lang: "en",
-      }}
       title={`${title} | ${data.site.siteMetadata.auther}`}
-      meta={[
-        {
-          name: "description",
-          content: data.site.siteMetadata.description,
-        },
-        {
-          property: "og:type",
-          content: "website",
-        },
-        { name: "twitter:card", content: "summary_large_image" },
-        { name: "twitter:site", content: "@nozomiishii_jp" },
-        {
-          property: "og:image",
-          content: `https://www.nozomiishii.jp/${data.file.childImageSharp.fluid.src}`,
-        },
-        { property: "og:title", content: "NOZOMI ISHII" },
-        { property: "og:description", content: "webpage for 2020" },
-        { property: "og:url", content: "https://www.nozomiishii.jp/" },
-      ]}
-    />
+      // meta={[
+      //   {
+      //     name: "description",
+      //     content: data.site.siteMetadata.description,
+      //   },
+      //   {
+      //     property: "og:type",
+      //     content: "website",
+      //   },
+      //   { name: "twitter:card", content: "summary_large_image" },
+      //   { name: "twitter:site", content: "@nozomiishii_jp" },
+      //   {
+      //     property: "og:image",
+      //     content: `https://www.nozomiishii.jp/${data.file.childImageSharp.fluid.src}`,
+      //   },
+      //   { property: "og:title", content: "NOZOMI ISHII" },
+      //   { property: "og:description", content: "webpage for 2020" },
+      //   { property: "og:url", content: "https://www.nozomiishii.jp/" },
+      // ]}
+    >
+      <meta name="twitter:site" content="@nozomiishii_jp" />
+      <meta name="twitter:title" content="nozomiishii.jp" />
+      <meta
+        name="twitter:description"
+        content={data.site.siteMetadata.description}
+      />
+      <meta
+        name="twitter:image"
+        content={`https://www.nozomiishii.jp/${data.file.childImageSharp.fluid.src}`}
+      />
+      <meta name="twitter:card" content="summary_large_image" />
+    </Helmet>
   );
 };
 
