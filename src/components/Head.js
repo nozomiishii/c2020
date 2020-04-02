@@ -54,9 +54,10 @@ const Head = ({ title }) => {
       />
       <meta
         name="twitter:image"
-        content={`https://www.nozomiishii.jp/${data.file.childImageSharp.fluid.src}`}
+        content={`https://www.nozomiishii.jp${data.file.childImageSharp.fluid.src}`}
       />
       <meta name="twitter:card" content="summary_large_image" />
+      <meta name="description" content={data.site.siteMetadata.description} />
     </Helmet>
   );
 };
