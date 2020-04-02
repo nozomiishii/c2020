@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
-import Head from "../components/Head";
+import SEO from "../components/SEO";
 import Form from "react-bootstrap/Form";
 import classes from "../styles/pages/contact.module.scss";
 import Row from "react-bootstrap/Row";
@@ -68,7 +68,7 @@ const ContactPage = () => {
   return (
     <React.Fragment>
       <Layout>
-        <Head title="CONTACT" />
+        <SEO title="CONTACT" />
         <h2>Contact</h2>
 
         <Row>

@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
-import Head from "../components/Head";
+import SEO from "../components/SEO";
 import Img from "gatsby-image";
 import { useStaticQuery, graphql } from "gatsby";
 import Row from "react-bootstrap/Row";
@@ -61,7 +61,7 @@ const CodelabPage = () => {
 
   return (
     <Layout>
-      <Head title="CODE LAB" />
+      <SEO title="CODE LAB" />
       <h2>Codelab</h2>
       <p>100 days of creating code since 20th Oct 2019.</p>
       <p>2019年10月20日から毎日100日間つくった作品</p>

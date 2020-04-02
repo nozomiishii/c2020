@@ -1,8 +1,8 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/Layout"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import Head from "../components/Head"
+import React from "react";
+import { graphql } from "gatsby";
+import Layout from "../components/Layout";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import SEO from "../components/SEO";
 
 export const query = graphql`
   query($slug: String!) {
@@ -14,21 +14,21 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-const Blog = props => {
+const Blog = (props) => {
   const options = {
     renderNode: {
-      "embedded-asset-block": node => {
-        const alt = node.data.target.fields.title["en-US"]
-        const url = node.data.target.fields.file["en-US"].url
-        return <img src={url} alt={alt} />
+      "embedded-asset-block": (node) => {
+        const alt = node.data.target.fields.title["en-US"];
+        const url = node.data.target.fields.file["en-US"].url;
+        return <img src={url} alt={alt} />;
       },
     },
-  }
+  };
   return (
     <Layout>
-      <Head title={props.data.contentfulBlogPost.title} />
+      <SEO title={props.data.contentfulBlogPost.title} />
       <h1>{props.data.contentfulBlogPost.title}</h1>
       <p>{props.data.contentfulBlogPost.date}</p>
       {documentToReactComponents(
@@ -36,7 +36,7 @@ const Blog = props => {
         options
       )}
     </Layout>
-  )
-}
+  );
+};
 
-export default Blog
+export default Blog;
