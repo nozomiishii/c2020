@@ -2,6 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 // import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
+import imgUrl from "../../static/c2020.png";
 
 const Head = ({ title }) => {
   const data = useStaticQuery(graphql`
@@ -11,13 +12,6 @@ const Head = ({ title }) => {
           auther
           title
           description
-        }
-      }
-      file(relativePath: { eq: "images/metaData/c2020.png" }) {
-        childImageSharp {
-          fluid {
-            src
-          }
         }
       }
     }
@@ -55,7 +49,7 @@ const Head = ({ title }) => {
       />
       <meta
         property="og:image"
-        content={`https://www.nozomiishii.jp${data.file.childImageSharp.fluid.src}`}
+        content={`https://www.nozomiishii.jp${imgUrl}`}
       />
       <meta property="og:image:width" content="512" />
       <meta property="og:image:height" content="512" />
