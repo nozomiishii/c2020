@@ -57,6 +57,8 @@ const Head = ({ title }) => {
         property="og:image"
         content={`https://www.nozomiishii.jp${data.file.childImageSharp.fluid.src}`}
       />
+      <meta property="og:image:width" content="512" />
+      <meta property="og:image:height" content="512" />
       <meta property="og:type" content="website" />
       <meta name="description" content={data.site.siteMetadata.description} />
     </Helmet>
