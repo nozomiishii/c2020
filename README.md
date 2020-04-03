@@ -1,5 +1,10 @@
 nozomi ishii
 
+https://www.nozomiishii.jp/
+
+my website for 2020.
+this is created by using React, Gatsby, Contentful, Netlify, and p5.js
+
 ↓ 　 what I can do is down below 　 ↓
 
 React, Material-UI
