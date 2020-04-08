@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 const Linklist = () => {
-  const links = ["about", "info", "codelab", "contact"];
+  const links = ["notes", "about", "info", "codelab", "contact"];
   return links.map((link) => (
     <Link
       to={`/${link}`}
@@ -22,7 +22,7 @@ const Header = () => {
     e.preventDefault();
     // props.displayModal();
     const navbar = document.getElementById("navbar");
-    navbar.classList.toggle(headerStyles.openNaebar);
+    navbar.classList.toggle(headerStyles.openNavbar);
     const linklist = document.querySelector("#headerLinkList");
     linklist.classList.toggle(headerStyles.show);
   };
