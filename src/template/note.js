@@ -1,5 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout";
+import { graphql } from "gatsby";
+import SEO from "../components/SEO";
 
 export const query = graphql`
   query($slug: String!) {
@@ -15,7 +17,10 @@ export const query = graphql`
 const Note = (props) => {
   return (
     <Layout>
-      <h1>{props.data.markdownRemark.frontmatter.title}</h1>
+      <SEO title={props.data.markdownRemark.frontmatter.title} />
+      <div style={{ marginBottom: "2rem" }}>
+        <h1>{props.data.markdownRemark.frontmatter.title}</h1>
+      </div>
       <div
         dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
       ></div>

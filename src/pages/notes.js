@@ -49,8 +49,7 @@ const Notes = () => {
         <h2>Notes</h2>
       </div>
       <div>
-        <p>いいなっておもった記事の倉庫</p>
-        <p>そのうち、ちゃんと見やすく整理します...</p>
+        <p>いいなあっておもった記事の倉庫</p>
       </div>
       <div className={classes.container}>{notes}</div>
     </Layout>
