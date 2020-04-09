@@ -1,5 +1,5 @@
 ---
-title: "markdown"
+title: "Markdown"
 ---
 
 Visual Studio Code で Markdown 編集環境を整える - Qiita

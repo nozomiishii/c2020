@@ -1,5 +1,5 @@
 ---
-title: "coding test"
+title: "Coding test"
 ---
 
 avaScript のコーディング面接した際の出題問題(Sort) - Qiita
