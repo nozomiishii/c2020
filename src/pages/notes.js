@@ -26,11 +26,16 @@ const Notes = () => {
   `);
 
   const notesSrc = data.allMarkdownRemark.edges;
+  // const sortedNoteSrc = notesSrc.sort(
+  //   (a, b) => a.node.frontmatter.title - b.node.frontmatter.title
+  // );
+  // console.log(sortedNoteSrc);
   const notes = notesSrc.map((edge) => {
     // console.log(edge.node.id);
+    console.log(edge.node.frontmatter.title);
     return (
       <div key={edge.node.id}>
-        <Link to={`notes/${edge.node.fields.slug}`}>
+        <Link to={`/notes/${edge.node.fields.slug}`}>
           {edge.node.frontmatter.title}
         </Link>
       </div>
