@@ -2,11 +2,12 @@ import React from "react";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 import { useStaticQuery, graphql, Link } from "gatsby";
+import classes from "../styles/pages/notes.module.scss";
 
 const Notes = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark(sort: { fields: frontmatter___title, order: ASC }) {
         edges {
           node {
             frontmatter {
@@ -44,10 +45,14 @@ const Notes = () => {
   return (
     <Layout>
       <SEO title="NOTES" />
-      <h2>notes</h2>
-      <p>いいなっておもった記事の倉庫</p>
-      <p>そのうち、ちゃんと見やすく整理します...</p>
-      {notes}
+      <div className={classes.title}>
+        <h2>Notes</h2>
+      </div>
+      <div>
+        <p>いいなっておもった記事の倉庫</p>
+        <p>そのうち、ちゃんと見やすく整理します...</p>
+      </div>
+      <div className={classes.container}>{notes}</div>
     </Layout>
   );
 };
