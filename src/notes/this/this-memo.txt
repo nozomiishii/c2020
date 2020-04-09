@@ -1,0 +1,507 @@
+アロー関数とthis
+ーーー予備知識: eventListener、オブジェクトにふれていること
+
+まとめーーーーーーーー
+
+arrowとfunctionの中のfunctionは常に参照はglobal
+シンプルなfunctionだけオブジェクト取れる。
+
+
+.bind(this)
+.bind({name:nozomi})
+で無理やり値を加えることもできる。
+
+
+
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+いやーついにきました
+this
+ここまでの内容の総復習といってもいいでしょう
+
+thisとはスコープである。
+
+const, letはブロックスコープ
+varはファンクションスコープ
+
+一度パート１から振り返ってJavaScriptの世界はどんなんだったか振り返ってみましょう
+
+
+とても悩んだところーーーーーーーーーーーーーーーーー
+
+let multiply;
+
+const multiplier = {
+  numbers: [2, 3, 4],
+  multiplyBy: 3,
+  multiply: () => {
+    const newArray = this.numbers.map(number => {
+      return number * this.multiplyBy;
+    });
+    return newArray;
+  }
+};
+
+console.log(multiplier.multiply());
+
+がなぜできないのか。
+
+イメージ方程式---------------------------------------
+const normal = function(){
+  return this;
+};
+
+obj.normal()
+  this === obj
+
+else
+  this === global
+
+ー　obj.normal()で呼ばれたときthisを束縛。ー
+
+
+
+結論ーーーーーーーーーーーーーーーー
+normal() はthisを呼び出したところで束縛する。
+arrow() は束縛しない。
+→　normal()にあたるまでずっと階層があがっていく。normalにあたらないとglobalスコープに行く
+
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+"JavaScriptでvarやletなどを付けずに宣言された変数はグローバルオブジェクトというオブジェクトのプロパティになる"
+
+name = "cat";
+つまり、
+global.name = "cat"
+のglobal.を省略したもの
+
+alert();
+これは、
+global.alert()
+のglobal.を省略したもの
+
+
+function speak(){
+　return "hi"
+}
+speak();
+これもじつは
+global.speak() の省略
+
+
+
+thisの決まるタイミング
+今までの関数: 関数が呼び出されたとき
+
+アロー関数： 関数を書いた時
+
+
+
+
+thisのとは
+今までの関数: 関数が呼び出されたときの
+アロー関数： 関数を作ったとき
+
+
+整理ーーーーーーーーーーーーーーーーーー
+thisは基本参照はglobal。
+ポイントは呼ばれ方。
+
+thisは基本参照はglobal。
+obj.function() で呼ばれたときは
+thisはobjを参照
+
+hoisting-----------------------------
+
+myfunction();
+
+function myfunction(){
+  consolo.log('hi')
+}
+//hoistingできる。
+
+
+
+myfunction();
+
+const myfunction = function(){
+  consolo.log('hi)
+}
+
+//hoistingできない。
+
+
+考察？？---------------
+arrow関数のthis nodeをたどってたどり着いたオブジェクト？
+es5の関数のthis nodeのすぐ上のオブジェクト？
+
+考察２ーーーーーーーーーー
+es5の関数でthisが呼ばれるとき
+その関数を実際に呼んでみて、ドットの隣に位置するオブジェクトがthis
+
+const me = {
+  name: "nozomi"
+  hi: function(){
+    console.log('hi');
+    setTimeout(function(){
+      console.log('how are you?')
+    }, 100)
+  }
+}
+me.hi()
+
+考察３ーーーーーーーーーーーーーーーーーーー
+normal functionはthisを呼び出したところで束縛する。（決める）
+arrow は束縛しない。
+→　normal()にあたるまでずっと階層があがっていく。normalにあたらないとglobalスコープに行く
+
+
+考察４ーーーーーーーーーーーーーーーーーーーーーーーー
+
+name = "nozomi";
+
+const arrow = () => {
+  return this.name;
+};
+
+const ishii = {
+  arrow: arrow,
+  arrow2: () => {
+    return this.name;
+  }
+};
+
+console.log(arrow()); //nozomi
+console.log(ishii.arrow()); //nozomi
+console.log(ishii.arrow2()); //nozomi
+
+案ーーーーーーーーーーーーーーーーーーーーーーーーーー
+
+    name = "earth";
+
+    const country = {
+      name: "japan",
+      location: function() {
+        console.log(this.name);
+      }
+    };
+
+    console.log(country.location()); //japan
+
+    // const location = country.location;
+    // console.log(location());
+    // //Identifier 'location' has already been declared
+
+    const place = country.location;
+    console.log(place()); //earth
+
+
+
+ボードゲームーーーーーーーーーーーーーーーーーーーーーーー
+
+
+フィールド
+
+this - 🐿コマ
+function - 囲い
+scope - 領土
+arrow - function(囲い)を壊せる or scope(領土)を増やせる
+
+
+クイズーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+
+
+    name = "nozomi";
+    const japan = {
+      name: "japan",
+      city: function() {
+        const name = "tokyo";
+        function shimbashi() {
+          const name = "toranomon";
+          return this.name;
+        }
+        return shimbashi();
+      }
+    };
+
+    console.log(japan.city());
+    console.log(name);
+
+答え
+  nozomi
+  nozomi
+
+Q2 -------------------
+    name = "nozomi";
+    const japan = {
+      name: "japan",
+      city: function() {
+        name = "tokyo";
+        function shimbashi() {
+          name = "toranomon";
+          return this.name;
+        }
+        return shimbashi();
+      }
+    };
+
+    console.log(japan.city());
+    console.log(name);
+
+答え
+  toranomon
+  toranomon
+  functionごとにglobal.nameが書き換えられているだけ。
+　
+
+
+例ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+    name = "ishii";
+
+    const user = {
+      name: "nozomi",
+      cities: ["tokyo", "wellington", "melbourne"],
+      printPlacesLived: function() {
+        console.log(this.name);
+        console.log(this.cities);
+        this.cities.forEach(function(city) {
+          console.log(`${this.name} has lived in ${city}`);
+        });
+      }
+    };
+
+    user.printPlacesLived(); // this.name = ishii
+
+例２------------------------------------------------------
+
+    name = "ishii";
+    cities = ["tokyo", "wellington", "melbourne", "london"];
+
+    const user = {
+      name: "nozomi",
+      cities: ["tokyo", "wellington", "melbourne"],
+      printPlacesLived() {
+        // console.log(this.name);
+        // console.log(this.cities);
+        this.cities.forEach(city => {
+          console.log(`${this.name} has lived in ${city}`);
+        });
+      }
+    };
+
+    user.printPlacesLived(); // nozomi
+    const printPlacesUserLived = user.printPlacesLived;
+    printPlacesUserLived(); // ishii
+
+
+使用例ーーーーーーーーーーーーーーーーーーーーーーーー
+
+    // name = "ishii";
+    // cities = ["tokyo", "wellington", "melbourne", "london"];
+
+    const user = {
+      name: "nozomi",
+      cities: ["tokyo", "wellington", "melbourne"],
+      printPlacesLived() {
+        // console.log(this.name);
+        // console.log(this.cities);
+        return (message = this.cities.map(city => {
+          return `${this.name} has lived in ${city}`;
+        }));
+      }
+    };
+
+    const msgs = user.printPlacesLived();
+    msgs.forEach(msg => {
+      document.write(msg);
+    });
+    // const printPlacesUserLived = user.printPlacesLived;
+    // printPlacesUserLived(); // ishii
+
+
+ボツーーーーーーーーーーーーーーーーーーーーーー
+なにが束縛って話になると思うが
+束縛彼女、束縛彼氏のどっちかで想像しやすい方で考えてほしい。
+ぼくの恋愛対象は女性なので以下は束縛彼女で進めていく。
+
+まずは
+束縛彼女の紹介。
+
+const func = function(){
+  return this;
+};
+
+function func(){
+  return this;
+}
+
+この２人は呼び出したときにthisを束縛できる。
+2人のちがいは
+
+
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+路線変更
+
+なにが束縛って話になると思うが
+束縛彼女、束縛彼氏のどっちかで想像しやすい方で考えてほしい。
+今までの実体験の束縛体験を入力してほしい
+束縛（強い） みさき
+束縛        ちふみ   
+束縛しない  ひろみ
+
+まずは
+束縛彼女の紹介。
+
+const func = function(){
+  return this;
+};
+
+function func(){
+  return this;
+}
+
+この２人は呼び出したときにthisを束縛できる。
+2人のちがいはしっての通り
+みさきの方が束縛がつよい。
+
+const func = function(){
+  return this;
+};
+
+function func(){
+  return this;
+}
+
+      name = "nozomi";
+
+      // const name = "nozomi";
+      // 名前を間違った日には処刑
+      console.log(this); //window{ name: 'nozomi'}
+      console.log(this.name); //nozomi
+
+      function normal() {
+        return this;
+      }
+      console.log("normal()", normal()); //window{ name: 'nozomi'}
+      const arrow = () => {
+        return this.name;
+      };
+
+      console.log("arrow()", arrow()); //nozomi
+
+      const ishii = {
+        arrow: arrow,
+        arrow2: () => {
+          return this.name;
+        }
+      };
+
+      console.log(ishii.arrow()); //nozomi
+      console.log(ishii.arrow2()); //nozomi
+
+
+
+資料ーーーーーーーーーーーーーーーーーーー
+【JavaScript】アロー関数式を学ぶついでにthisも復習する話 - Qiita
+https://qiita.com/mejileben/items/69e5facdb60781927929
+↑注意、混乱を招く。
+
+
+Understanding Functions and 'this' In The World of ES2017 - YouTube
+https://www.youtube.com/watch?v=AOSYY1_np_4
+
+
+WTF is THIS: Understanding the "this" keyword in JavaScript
+https://youtu.be/zE9iro4r918
+
+
+
+-------------------------------------
+
+あなたはすでに
+
+FILE
+bindingGirlfriend.js
+のなかにいます
+
+console.log(this);　//global
+このthisはグローバルオブジェクト
+つまり束縛彼女をさします
+
+束縛彼女はglobalオブジェクトです。
+functionは他の女です。
+
+あなたは飲みに行きたいです。
+
+
+
+
+
+message = ""
+
+
+
+const line = () => return this.message;
+console.log(line());
+
+//this === global
+
+
+
+
+
+--補足
+"JavaScriptでvarやletなどを付けずに宣言された変数はグローバルオブジェクトというオブジェクトのプロパティになる"
+
+name = "cat";
+つまり、global.name = "cat"
+のglobal.を省略したもの
+
+alert();
+これは、global.alert()
+のglobal.を省略したもの
+
+function speak(){
+　return "hi"
+}
+speak();
+これもじつはglobal.speak() の省略
+
+
+
+
+
+
+まとめ
+
+補足
+束縛彼女をthis扱いした日にはメンヘラ。
+
+
+
+      name = "nozomi";
+
+      // const name = "nozomi";
+      // 名前を間違った日には処刑
+      console.log(this); //window{ name: 'nozomi'}
+      console.log(this.name); //nozomi
+
+      function normal() {
+        return this;
+      }
+      console.log("normal()", normal()); //window{ name: 'nozomi'}
+
+      
+      const arrow = () => {
+        return this.name;
+      };
+
+      console.log("arrow()", arrow()); //nozomi
+
+      const ishii = {
+        arrow: arrow,
+        arrow2: () => {
+          return this.name;
+        }
+      };
+
+      console.log(ishii.arrow()); //nozomi
+      console.log(ishii.arrow2()); //nozomi
