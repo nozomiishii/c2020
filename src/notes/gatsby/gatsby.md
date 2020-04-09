@@ -1,5 +1,5 @@
 ---
-title: "gatsby information"
+title: "gatsby"
 ---
 
 Gatsby JS - The Great Gatsby Bootcamp [Full Tutorial] - YouTube
