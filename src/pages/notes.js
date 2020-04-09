@@ -40,6 +40,8 @@ const Notes = () => {
     <Layout>
       <SEO title="NOTES" />
       <h2>notes</h2>
+      <p>いいなっておもった記事の倉庫</p>
+      <p>そのうち、ちゃんと見やすく整理します...</p>
       {notes}
     </Layout>
   );
