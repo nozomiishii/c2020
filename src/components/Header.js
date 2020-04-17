@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 const Linklist = () => {
-  const links = ["notes", "about", "info", "codelab", "contact"];
+  const links = ["about", "lists", "notes", "info", "codelab", "contact"];
   return links.map((link) => (
     <Link
       to={`/${link}`}

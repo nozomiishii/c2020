@@ -1,6 +1,6 @@
 import React from "react";
 import footerStyles from "../styles/components/footer.module.scss";
-import LinkToSNS from "./LinkToSNS";
+import LinkToSNS from "./PageLinks";
 
 const Footer = () => (
   <div className={footerStyles.footer}>

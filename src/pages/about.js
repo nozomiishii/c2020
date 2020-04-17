@@ -2,12 +2,13 @@ import React from "react";
 import Layout from "../components/Layout";
 import classes from "../styles/pages/about.module.scss";
 import SEO from "../components/SEO";
-import LinkToSNS from "../components/LinkToSNS";
+import PageLinks from "../components/PageLinks";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
+import sns from "../data/sns";
 
 const AboutPage = () => {
   const data = useStaticQuery(graphql`
@@ -26,6 +27,7 @@ const AboutPage = () => {
     }
   `);
 
+  // console.log(sns);
   // console.log(data);
   // console.log(data.images.nodes.find(({ name }) => name === "c2019"));
   const images = data.images.nodes;
@@ -50,7 +52,7 @@ const AboutPage = () => {
               </Col>
             </Row>
             <div className={classes.links}>
-              <LinkToSNS />
+              <PageLinks data={sns} />
             </div>
             <h5 className="mt-5">Skill-set</h5>
             <p>
