@@ -7,4 +7,27 @@
   div {
     padding: 1rem 0;
   }
+  a {
+    display: block;
+    background: #f4f4f4;
+    color: #19181a;
+    padding: 1rem;
+    text-decoration: none;
+  }
+  a:hover {
+    background: #e4e4e4;
+  }
+}
+
+.lists {
+  a {
+    display: block;
+    background: #f4f4f4;
+    color: #19181a;
+    padding: 1rem;
+    text-decoration: none;
+  }
+  a:hover {
+    background: #e4e4e4;
+  }
 }
