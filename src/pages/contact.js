@@ -66,11 +66,9 @@ const ContactPage = () => {
   };
 
   return (
-    <React.Fragment>
-      <Layout>
+    <>
+      <Layout title="Contact">
         <SEO title="CONTACT" />
-        <h2>Contact</h2>
-
         <Row>
           <Col md={6}>
             <p className={classes.message}>
@@ -172,7 +170,7 @@ const ContactPage = () => {
           </span>
         </h1>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

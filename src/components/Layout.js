@@ -15,7 +15,12 @@ const Layout = (props) => {
       </div>
       <div className={classes.container}>
         {/* <Header hidden /> */}
-        <div className={classes.content}>{props.children}</div>
+        <div className={classes.content}>
+          {props.title ? (
+            <h2 className={classes.title}>{props.title}</h2>
+          ) : undefined}
+          {props.children}
+        </div>
         <Footer />
       </div>
     </React.Fragment>

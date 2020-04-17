@@ -60,9 +60,8 @@ const CodelabPage = () => {
   };
 
   return (
-    <Layout>
+    <Layout title="Codelab">
       <SEO title="CODE LAB" />
-      <h2>Codelab</h2>
       <p>100 days of creating code since 20th Oct 2019.</p>
       <p>2019年10月20日から毎日100日間つくった作品</p>
       <Row className={classes.cards}>{displayImages()}</Row>

@@ -35,8 +35,7 @@ const AboutPage = () => {
   const profile = images.find(({ name }) => name === "profile");
 
   return (
-    <Layout>
-      <h2>Nozomi Ishii who?</h2>
+    <Layout title="Nozomi Ishii who?">
       <Row>
         <Col md={8}>
           <SEO title="ABOUT" />

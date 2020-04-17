@@ -26,9 +26,8 @@ const BlogPage = () => {
   `);
   // console.log(data.allContentfulBlogPost.edges[0].node.media.fluid.src);
   return (
-    <Layout>
+    <Layout title="Information">
       <SEO title="INFO" />
-      <h2>Information</h2>
       <p>お知らせ</p>
       <ol className={classes.posts}>
         {data.allContentfulBlogPost.edges.map((edge) => {

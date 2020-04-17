@@ -43,11 +43,8 @@ const Notes = () => {
     );
   });
   return (
-    <Layout>
+    <Layout title="Notes">
       <SEO title="NOTES" />
-      <div className={classes.title}>
-        <h2>Notes</h2>
-      </div>
       <div>
         <p>いいなあっておもった記事の倉庫</p>
       </div>

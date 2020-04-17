@@ -12,8 +12,7 @@ const ListsPage = () => {
   console.log(articles);
 
   return (
-    <Layout>
-      <h2>Lists</h2>
+    <Layout title="Lists">
       <p>個人的に今キテいるWebpages</p>
       <div className={classes.lists}>
         <PageLinks data={tutorials} />
