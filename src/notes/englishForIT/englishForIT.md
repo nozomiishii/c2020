@@ -1,3 +1,18 @@
-503
+---
+title: 'english for IT'
+---
 
-Site is currently down. Check back soon!
+503　Site is currently down. Check back soon!
+サイトおちてるからまたきてね！
+
+Token
+期間限定の鍵だお
+
+authentication
+だれですかー？
+
+authorization
+許可ありますぅー？
+
+middleware
+下ごしらえ
