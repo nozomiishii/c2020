@@ -16,3 +16,7 @@ authorization
 
 middleware
 下ごしらえ
+
+bearer
+a person or thing that carries, upholds, or brings:
+持ち主
