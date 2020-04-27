@@ -1,8 +1,8 @@
 ---
-title: 'english for IT'
+title: "english for IT"
 ---
 
-503　Site is currently down. Check back soon!
+503 　 Site is currently down. Check back soon!
 サイトおちてるからまたきてね！
 
 Token
@@ -20,3 +20,6 @@ middleware
 bearer
 a person or thing that carries, upholds, or brings:
 持ち主
+
+API
+うちの機能分けてあげるよー
