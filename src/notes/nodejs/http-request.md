@@ -19,3 +19,9 @@ https://www.npmjs.com/package/axios
 ubuntu - How to kill a nodejs process in Linux? - Stack Overflow
 
 https://stackoverflow.com/questions/31649267/how-to-kill-a-nodejs-process-in-linux
+
+---
+
+Node サーバーとネストされた React サーバーを同時に走らせたい時のメモ - Qiita
+
+https://qiita.com/ikt2y/items/387dc5ddc2e837f2acdb
