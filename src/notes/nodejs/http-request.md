@@ -16,4 +16,6 @@ https://www.npmjs.com/package/axios
 
 ---
 
-https://www.npmjs.com/package/bent
+ubuntu - How to kill a nodejs process in Linux? - Stack Overflow
+
+https://stackoverflow.com/questions/31649267/how-to-kill-a-nodejs-process-in-linux
