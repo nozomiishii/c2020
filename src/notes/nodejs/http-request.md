@@ -25,3 +25,9 @@ https://stackoverflow.com/questions/31649267/how-to-kill-a-nodejs-process-in-lin
 Node サーバーとネストされた React サーバーを同時に走らせたい時のメモ - Qiita
 
 https://qiita.com/ikt2y/items/387dc5ddc2e837f2acdb
+
+---
+
+proxy とは　知っていると捗る create-react-app の設定 - Qiita
+
+https://qiita.com/geek_duck/items/6f99a3da15dd39658fff
