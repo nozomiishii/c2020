@@ -17,3 +17,9 @@ https://agohack.com/attr-prop-attributes/
 javascript - What is the difference between substr and substring? - Stack Overflow
 
 https://stackoverflow.com/questions/3745515/what-is-the-difference-between-substr-and-substring
+
+---
+
+javascript の String の substring slice substr - Qiita
+
+https://qiita.com/littlekbt/items/4a47f485391b6b45d96c
