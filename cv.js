@@ -9,7 +9,7 @@ const sorter = (strSkills) => {
   const arrSKills = strSkills.split(" ");
   console.log(arrSKills);
   // return arrSKills.sort((a, b) => b - a).join("<br/>");
-  return arrSKills.sort().join("<br/>");
+  return arrSKills.sort().join(", ");
 };
 
 console.log(sorter(skills));

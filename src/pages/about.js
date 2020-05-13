@@ -55,10 +55,11 @@ const AboutPage = () => {
             </div>
             <h5 className="mt-5">Skill-set</h5>
             <p>
-              React, GraphQL, Gatsby.js, Contentful, JavaScript, HTML, CSS,
-              SCSS, Bootstrap4, p5.js, ml5.js, npm, yarn, Node.js, webpack4,
-              Babel, Express, MangoDB, Firebase, Jest, Enzyme, ESLint, Visual
-              Studio Code, iTerm2, Homebrew, GitHub, Heroku
+              Babel, CSS, Contentful, ESLint, Enzyme, Express, Firebase,
+              Gatsby.js, GitHub, GraphQL, HTML, Heroku, Homebrew, JWT,
+              JavaScript, Jest, MangoDB, Material-UI, Node.js, OAuth2.0,
+              Passport.js, React, SCSS, TypeScript, VSCode, ml5.js, npm, p5.js,
+              webpack4, yarn
             </p>
           </div>
           <div>
@@ -72,7 +73,7 @@ const AboutPage = () => {
                 >
                   <Img fluid={c2019.childImageSharp.fluid} />
                 </a>
-                <h5>2020</h5>
+                <h5>2019</h5>
                 <p>First time for creating my page using Ruby on Rails.</p>
               </Col>
             </Row>
