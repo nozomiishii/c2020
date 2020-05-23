@@ -1,6 +1,5 @@
-import React from "react";
-import Layout from "../components/Layout";
-import SEO from "../components/SEO";
+import React, { useState } from "react";
+import { Layout, SEO, EmailModal, SubmitButton } from "../components";
 import Form from "react-bootstrap/Form";
 import classes from "../styles/pages/contact.module.scss";
 import Row from "react-bootstrap/Row";
@@ -33,33 +32,29 @@ const ContactPage = () => {
 
   const images = data.images.nodes;
   const profile = images.find(({ name }) => name === "profile");
-
-  const [state, setState] = React.useState({});
+  const [message, setMessage] = useState({});
+  const [showModal, setShowModal] = useState(false);
 
   const handleChange = (e) => {
     const key = e.target.name;
     const value = e.target.value;
-    setState({ ...state, [key]: value });
+    setMessage((prev) => ({ ...prev, [key]: value }));
     // console.log(state);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    form.textContent = "Sending...";
-    const modal = document.getElementById("sendingEmail");
-    modal.classList.remove(classes.hidden);
-    modal.classList.add(classes.show);
+    setShowModal(true);
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": form.getAttribute("name"),
-        ...state,
+        ...message,
       }),
     })
       .then((data) => {
-        // console.log(data);
         navigate(form.getAttribute("action"));
       })
       .catch((error) => alert(error));
@@ -91,15 +86,14 @@ const ContactPage = () => {
           <Col md={6}>
             <Form
               action="/contactSubmitted"
-              // action="/contact"
               name="contact"
               method="post"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               onSubmit={handleSubmit}
-              // onClick={handleSubmit}
               className={classes.form}
             >
+              {/* honey pot */}
               <input type="hidden" name="form-name" value="contact" />
               <p hidden>
                 <label>
@@ -107,6 +101,8 @@ const ContactPage = () => {
                   <input name="bot-field" onChange={handleChange} />
                 </label>
               </p>
+              {/* honey pot */}
+
               <Form.Group controlId="formName">
                 <Form.Label>Your name</Form.Label>
                 <Form.Control
@@ -146,30 +142,12 @@ const ContactPage = () => {
                   required
                 />
               </Form.Group>
-              <button className={classes.button} type="submit">
-                Send
-              </button>
+              <SubmitButton type="submit">Send</SubmitButton>
             </Form>
           </Col>
         </Row>
       </Layout>
-      <div
-        id="sendingEmail"
-        className={`${classes.hidden} ${classes.sendingEmail}`}
-      >
-        <div className={classes.emailEmoji}>
-          <h4>
-            <span role="img" aria-label="sending email">
-              💌
-            </span>
-          </h4>
-        </div>
-        <h1>
-          <span role="img" aria-label="plase wait">
-            👨🏻‍🚀
-          </span>
-        </h1>
-      </div>
+      {showModal && <EmailModal />}
     </>
   );
 };

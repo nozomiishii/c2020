@@ -1,7 +1,5 @@
 import React from "react";
-import Layout from "../components/Layout";
-import SEO from "../components/SEO";
-import Loading from "../components/Loading";
+import { Layout, SEO, Loading } from "../components";
 import sketch from "../canvas/sketch";
 import Loadable from "react-loadable";
 

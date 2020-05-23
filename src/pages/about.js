@@ -1,10 +1,9 @@
 import React from "react";
-import Layout from "../components/Layout";
+import { Layout, Profile } from "../components";
 import { useStaticQuery, graphql } from "gatsby";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
-import Profile from "../components/Profile";
 
 const AboutPage = () => {
   const data = useStaticQuery(graphql`

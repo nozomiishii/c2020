@@ -1,6 +1,5 @@
 import React from "react";
-import Layout from "../components/Layout";
-import SEO from "../components/SEO";
+import { Layout, SEO } from "../components";
 import Img from "gatsby-image";
 import { useStaticQuery, graphql } from "gatsby";
 import Row from "react-bootstrap/Row";
