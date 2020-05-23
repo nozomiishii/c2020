@@ -41,7 +41,8 @@
     "react-p5": "^1.3.2",
     "react-p5-wrapper": "^2.0.0",
     "react-twitter-embed": "^3.0.3",
-    "sharp": "^0.25.2"
+    "sharp": "^0.25.2",
+    "styled-components": "^5.1.0"
   },
   "devDependencies": {
     "env-cmd": "^10.1.0",
