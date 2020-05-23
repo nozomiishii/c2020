@@ -1,41 +1,49 @@
 import React from "react";
-import Layout from "../components/Layout";
-import SEO from "../components/SEO";
-import classes from "../styles/pages/index.module.scss";
-import Loading from "../components/Loading";
+import { Layout, SEO, Loading } from "../components";
 import sketch from "../canvas/sketch";
 import Loadable from "react-loadable";
 
-class IndexPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      gameMode: true,
-    };
-  }
-  render() {
-    if (typeof window !== "undefined") {
-      const P5Wrapper = Loadable({
-        loader: () => import("react-p5-wrapper"),
-        loading: Loading,
-      });
+import styled from "styled-components";
 
-      return (
-        <div className={classes.index}>
-          <Layout gameMode={this.state.gameMode}>
-            <SEO title="HOME" />
-            <div className={classes.sketch}>
-              <P5Wrapper sketch={sketch} />
-              {/* <Loading /> */}
-            </div>
-          </Layout>
-        </div>
-      );
-    } else {
-      // if window does not exist
-      return null;
-    }
+const IndexWapper = styled.div`
+  position: relative;
+  background: #000000;
+  color: #666666;
+`;
+
+const Sketch = styled.div`
+  left: 0;
+  top: 3;
+  position: absolute;
+  touch-action: manipulation;
+  user-select: none;
+  width: 100vw;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+`;
+
+const IndexPage = () => {
+  if (typeof window !== "undefined") {
+    const P5Wrapper = Loadable({
+      loader: () => import("react-p5-wrapper"),
+      loading: Loading,
+    });
+    const gameMode = true;
+    return (
+      <IndexWapper>
+        <Layout gameMode={gameMode}>
+          <SEO title="HOME" />
+          <Sketch>
+            <P5Wrapper sketch={sketch} />
+            {/* <Loading /> */}
+          </Sketch>
+        </Layout>
+      </IndexWapper>
+    );
+  } else {
+    // if window does not exist
+    return null;
   }
-}
+};
 
 export default IndexPage;

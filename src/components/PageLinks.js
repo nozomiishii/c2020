@@ -1,7 +1,6 @@
 import React from "react";
 
 const PageLinks = (props) => {
-  console.log("props", props.data);
   return (
     <>
       {props.data &&

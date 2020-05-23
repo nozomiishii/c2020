@@ -1,3 +1,5 @@
+yarn develop to start developping
+
 nozomi ishii
 
 React, GraphQL
