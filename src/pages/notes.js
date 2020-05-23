@@ -1,8 +1,24 @@
 import React from "react";
-import Layout from "../components/Layout";
-import SEO from "../components/SEO";
+import { Layout, SEO } from "../components";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import classes from "../styles/pages/notes.module.scss";
+
+import styled from "styled-components";
+const Container = styled.div`
+  padding: 1rem 0;
+  div {
+    padding: 1rem 0;
+  }
+  a {
+    display: block;
+    background: #f4f4f4;
+    color: #19181a;
+    padding: 1rem;
+    text-decoration: none;
+  }
+  a:hover {
+    background: #e4e4e4;
+  }
+`;
 
 const Notes = () => {
   const data = useStaticQuery(graphql`
@@ -48,7 +64,7 @@ const Notes = () => {
       <div>
         <p>いいなあっておもった記事の倉庫</p>
       </div>
-      <div className={classes.container}>{notes}</div>
+      <Container>{notes}</Container>
     </Layout>
   );
 };

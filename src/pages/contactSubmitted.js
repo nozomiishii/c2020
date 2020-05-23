@@ -1,15 +1,31 @@
 import React from "react";
-import Layout from "../components/Layout";
-import SEO from "../components/SEO";
+import { Layout, SEO } from "../components";
 import Container from "react-bootstrap/Container";
-import classes from "../styles/pages/contactSubmitted.module.scss";
+
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 70%;
+`;
+
+const Message = styled.div`
+  align-self: start;
+  margin: 2vh 0;
+`;
+
+const Signature = styled.div`
+  align-self: flex-end;
+`;
 
 const ContactSubmitted = () => (
   <Layout>
     <SEO title="THANK YOU!!!" />
     <Container>
-      <div className={classes.contactSubmitted}>
-        <div className={classes.message}>
+      <Wrapper>
+        <Message>
           <h1>Thank you!!</h1>
           <p>
             I'm very happy to hear from your message.
@@ -18,8 +34,8 @@ const ContactSubmitted = () => (
             <br />
             Have a wonderful the rest of the day!
           </p>
-        </div>
-        <div className={classes.message}>
+        </Message>
+        <Message>
           <h3>ありがとうございます！！</h3>
           <p>
             メッセージをいただけてとても嬉しいです。
@@ -28,11 +44,11 @@ const ContactSubmitted = () => (
             <br />
             良い残りの一日を！
           </p>
-        </div>
-        <div className={classes.signature}>
+        </Message>
+        <Signature>
           <h6>- NOZOMI</h6>
-        </div>
-      </div>
+        </Signature>
+      </Wrapper>
     </Container>
   </Layout>
 );
