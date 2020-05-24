@@ -22,10 +22,6 @@ const Div = styled.div`
 `;
 
 const ListsPage = () => {
-  console.log(tutorials);
-  console.log(events);
-  console.log(articles);
-
   return (
     <Layout title="Lists">
       <p>個人的に今キテいるWebpages</p>

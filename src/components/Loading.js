@@ -1,61 +1,74 @@
-import React from "react";
-import classes from "../styles/components/loading.module.scss";
+import React, { useState, useEffect } from "react";
+import styled, { keyframes } from "styled-components";
 
-let timer1, timer2;
+const loadingTitle = keyframes`
+  0% {
+    color: #000;
+  }
+  100% {
+    color: white;
+  }
+`;
+const loading = keyframes`
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+`;
+const Wrapper = styled.div`
+  align-items: center;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 70vh;
+  width: 100vw;
+  h3 {
+    animation: ${loadingTitle} 2s infinite alternate linear;
+  }
+`;
+const Emoji = styled.span`
+  animation: ${loading} 3s infinite linear;
+  display: inline-block;
+`;
 
-class Loading extends React.Component {
-  constructor(props) {
-    super(props);
-    this._isMounted = false;
-    this.state = {
-      count: 0,
-    };
-  }
-  componentDidMount() {
-    this._isMounted = true;
-    if (this._isMounted) {
-      this.setState((prevState) => ({ count: prevState.count + 1 }));
-    }
-  }
-  componentDidUpdate(prevProps, prevState) {
-    if (this._isMounted && prevState.count >= 95) {
-      return (timer2 = setTimeout(
-        () =>
-          this.setState((prevState) => ({
-            count: (prevState.count * 10 + 1) / 10,
-          })),
+const Loading = () => {
+  const [loadingCount, setLoadingCount] = useState(0);
+
+  useEffect(() => {
+    let timer1, timer2;
+    if (loadingCount >= 98) {
+      timer2 = setInterval(
+        () => setLoadingCount((prev) => (prev * 10 + 1) / 10),
         1000
-      ));
+      );
     }
-    if (this._isMounted && prevState.count < 95) {
-      return (timer1 = setTimeout(
-        () =>
-          this.setState((prevState) => ({
-            count: prevState.count + 1,
-          })),
-        10
-      ));
+    if (loadingCount < 98) {
+      timer1 = setInterval(() => setLoadingCount((prev) => prev + 1), 10);
     }
-  }
-  componentWillUnmount() {
-    this._isMounted = false;
-    clearTimeout(timer1);
-    clearTimeout(timer2);
-  }
-
-  render() {
-    return (
-      <div className={classes.loading}>
-        <h3>
-          <span className={classes.emoji} role="img" aria-label="img">
+    return () => {
+      clearInterval(timer1);
+      clearInterval(timer2);
+    };
+  }, [loadingCount]);
+  return (
+    <Wrapper>
+      <h3>
+        <Emoji>
+          <span role="img" aria-label="img">
             👨🏻‍🚀
           </span>
-          LOADING...
-        </h3>
-        <p>{this.state.count}%</p>
-      </div>
-    );
-  }
-}
+        </Emoji>
+        LOADING...
+      </h3>
+      <p>{loadingCount}%</p>
+    </Wrapper>
+  );
+};
 
 export default Loading;
