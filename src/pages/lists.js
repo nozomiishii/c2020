@@ -33,7 +33,6 @@ const ListsPage = () => {
       <Div>
         <PageLinks data={tutorials} />
       </Div>
-
       <h2>events</h2>
       <Div>
         <PageLinks data={events} />
