@@ -16,7 +16,7 @@ const encode = (data) => {
 const ContactPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      images: allFile(filter: { relativeDirectory: { eq: "images/about" } }) {
+      images: allFile(filter: { relativeDirectory: { eq: "images" } }) {
         nodes {
           id
           name
@@ -31,7 +31,7 @@ const ContactPage = () => {
   `);
 
   const images = data.images.nodes;
-  const profile = images.find(({ name }) => name === "profile");
+  const profile = images.find(({ name }) => name === "contact");
   const [message, setMessage] = useState({});
   const [showModal, setShowModal] = useState(false);
 
@@ -66,11 +66,11 @@ const ContactPage = () => {
         <SEO title="CONTACT" />
         <Row>
           <Col md={6}>
-            <p className={classes.message}>
+            <h2 className={classes.message}>
               I'm really happy to work with you.
               <br />
               Please get in touch with me!
-            </p>
+            </h2>
             <p className={classes.message}>
               <span className={classes.japaneseText}>
                 一緒にお仕事できたら大変うれしいです。

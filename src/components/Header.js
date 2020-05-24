@@ -27,7 +27,7 @@ const Header = () => {
     linklist.classList.toggle(headerStyles.show);
   };
   return (
-    <React.Fragment>
+    <>
       <Row id="navbar" className={headerStyles.header}>
         <Col xs={7} md={5} className={headerStyles.title}>
           <Link to="/">
@@ -41,7 +41,7 @@ const Header = () => {
           </div>
         </Col>
       </Row>
-    </React.Fragment>
+    </>
   );
 };
 

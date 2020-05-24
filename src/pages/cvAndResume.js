@@ -32,7 +32,6 @@ const CvAndResume = () => {
   const images = data.images.nodes;
   const cvImg = images.find(({ name }) => name === "cv");
   const resumeImg = images.find(({ name }) => name === "resume");
-  console.log(cvImg.childImageSharp.publicURL);
 
   // console.log
   // const images = data.images.nodes;

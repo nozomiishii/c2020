@@ -59,8 +59,10 @@ const Loading = () => {
   return (
     <Wrapper>
       <h3>
-        <Emoji role="img" aria-label="img">
-          👨🏻‍🚀
+        <Emoji>
+          <span role="img" aria-label="img">
+            👨🏻‍🚀
+          </span>
         </Emoji>
         LOADING...
       </h3>
