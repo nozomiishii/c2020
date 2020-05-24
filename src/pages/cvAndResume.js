@@ -1,23 +1,24 @@
 import React from "react";
 import { Layout, SEO } from "../components";
 import { useStaticQuery, graphql } from "gatsby";
-// import Row from "react-bootstrap/Row";
-// import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import Img from "gatsby-image";
-import styled from "styled-components";
+// import styled from "styled-components";
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
+// const Container = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+// `;
 
-const CustomImg = styled(Img)`
-  height: 100%;
-  width: 100%;
-  margin-bottom: 5vh;
-`;
+// const CustomImg = styled(Img)`
+//   height: 100%;
+//   width: 100%;
+//   max-width: 960px;
+//   margin-bottom: 5vh;
+// `;
 
 const CvAndResume = () => {
   const data = useStaticQuery(graphql`
@@ -26,7 +27,6 @@ const CvAndResume = () => {
         nodes {
           id
           name
-          publicURL
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid
@@ -46,12 +46,16 @@ const CvAndResume = () => {
   return (
     <Layout title="CV and Resume">
       <SEO title="CV and Resume" />
-      <Container>
-        <h1>Resume</h1>
-        <CustomImg fluid={resumeImg.childImageSharp.fluid} />
-        <h1>CV</h1>
-        <CustomImg fluid={cvImg.childImageSharp.fluid} />
-      </Container>
+      <Row>
+        <Col sx={12}>
+          <h1>Resume</h1>
+          <Img fluid={resumeImg.childImageSharp.fluid} />
+        </Col>
+        <Col sx={12}>
+          <h1>CV</h1>
+          <Img fluid={cvImg.childImageSharp.fluid} />
+        </Col>
+      </Row>
     </Layout>
   );
 };
