@@ -14,6 +14,15 @@ const PageLinks = (props) => {
           >
             {name.toUpperCase()}
           </a>
+          // <iframe
+          //   id="ytplayer"
+          //   title={name}
+          //   type="text/html"
+          //   width="640"
+          //   height="360"
+          //   src={href}
+          //   frameborder="0"
+          // ></iframe>
         ))}
     </>
   );
