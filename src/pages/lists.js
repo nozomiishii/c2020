@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "../components/Layout";
+import { Layout, SEO } from "../components";
 import tutorials from "../data/tutorials";
 import events from "../data/events";
 import articles from "../data/articles";
@@ -24,6 +24,7 @@ const Div = styled.div`
 const ListsPage = () => {
   return (
     <Layout title="Lists">
+      <SEO title="LISTS" />
       <p>個人的に今キテいるWebpages</p>
       <h2>tutorials</h2>
       <Div>

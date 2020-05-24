@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout, Profile } from "../components";
+import { Layout, Profile, SEO } from "../components";
 import { useStaticQuery, graphql } from "gatsby";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -28,6 +28,7 @@ const AboutPage = () => {
 
   return (
     <Layout title="Nozomi Ishii who?">
+      <SEO title="ABOUT" />
       <Row>
         <Col md={8}>
           <Profile c2019Img={c2019Img} profileImg={profileImg} />

@@ -40,10 +40,10 @@ const CvAndResume = () => {
       <SEO title="CV and Resume" />
       <Row>
         <Col md={6}>
-          <CustomImg fluid={cvImg.childImageSharp.fluid} />
+          <CustomImg fluid={resumeImg.childImageSharp.fluid} />
         </Col>
         <Col md={6}>
-          <CustomImg fluid={resumeImg.childImageSharp.fluid} />
+          <CustomImg fluid={cvImg.childImageSharp.fluid} />
         </Col>
       </Row>
     </Layout>
