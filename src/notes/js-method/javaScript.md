@@ -1,5 +1,5 @@
 ---
-title: "JavaScript"
+title: "JavaScript - Methods"
 ---
 
 JavaScript の some と every がすごく便利 - Qiita

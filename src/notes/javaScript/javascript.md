@@ -1,5 +1,5 @@
 ---
-title: "JavaScript"
+title: "JavaScript - async"
 ---
 
 タグに async / defer を付けた場合のタイミング - Qiita
