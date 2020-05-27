@@ -42,13 +42,13 @@ const Loading = () => {
 
   useEffect(() => {
     let timer1, timer2;
-    if (loadingCount >= 98) {
+    if (loadingCount >= 99) {
       timer2 = setInterval(
         () => setLoadingCount((prev) => (prev * 10 + 1) / 10),
         1000
       );
     }
-    if (loadingCount < 98) {
+    if (loadingCount < 99) {
       timer1 = setInterval(() => setLoadingCount((prev) => prev + 1), 10);
     }
     return () => {
