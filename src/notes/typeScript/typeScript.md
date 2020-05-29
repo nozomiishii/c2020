@@ -11,16 +11,26 @@ TypeScript 再入門「がんばらない TypeScript」で、JavaScript を“�
 
 https://employment.en-japan.com/engineerhub/entry/2019/04/16/103000#f-e1ccc314
 
-
 ---
 
-TypeScript｜ジェネリック型(Generics)の指定方法と利便性 - わくわくBank
+TypeScript ｜ジェネリック型(Generics)の指定方法と利便性 - わくわく Bank
 
 https://www.wakuwakubank.com/posts/500-typescript-generics/
 
+---
+
+TypeScript の目玉機能「ジェネリック（Generics）」はこうなっている - Build Insider
+
+https://www.buildinsider.net/language/tsgeneric/01
 
 ---
 
-TypeScriptの目玉機能「ジェネリック（Generics）」はこうなっている - Build Insider
+React Refs with TypeScript - Martin Hochel - Medium
 
-https://www.buildinsider.net/language/tsgeneric/01
+https://medium.com/@martin_hotell/react-refs-with-typescript-a32d56c4d315
+
+---
+
+TypeScript and React: Hooks
+
+https://fettblog.eu/typescript-react/hooks/#useref
