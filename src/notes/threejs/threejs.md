@@ -17,3 +17,9 @@ https://discoverthreejs.com/
 WebGL 総本山
 
 https://webgl.souhonzan.org/
+
+---
+
+最新版で学ぶ webpack 4 入門 - Babel 7 で ES2020 環境の構築(React, Vue, Three.js, jQuery のサンプル付き) - ICS MEDIA
+
+https://ics.media/entry/16028/#webpack-babel-three
