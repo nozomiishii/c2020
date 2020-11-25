@@ -4,7 +4,7 @@ import headerStyles from "../styles/components/header.module.scss";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-const Linklist = () => {
+const LinkList = () => {
   const links = ["about", "lists", "notes", "info", "codelab", "contact"];
   return links.map((link) => (
     <Link
@@ -23,8 +23,8 @@ const Header = () => {
     // props.displayModal();
     const navbar = document.getElementById("navbar");
     navbar.classList.toggle(headerStyles.openNavbar);
-    const linklist = document.querySelector("#headerLinkList");
-    linklist.classList.toggle(headerStyles.show);
+    const linkList = document.querySelector("#headerLinkList");
+    linkList.classList.toggle(headerStyles.show);
   };
   return (
     <>
@@ -37,7 +37,7 @@ const Header = () => {
         <Col xs={5} md={7} className={headerStyles.menu}>
           <button onClick={handleClick}>MENU</button>
           <div id="headerLinkList">
-            <Linklist />
+            <LinkList />
           </div>
         </Col>
       </Row>
